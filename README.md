@@ -2,22 +2,22 @@
 
 ## Problem
 
-- Mieter haben es schwer den Vermieter zu überzeugen Sanierungen zu starten, da der Vermieter wenig davon profitiert.
-- Zusätzlich ist die Lage am Mietmarkt gerade so eng, dass sich Vermieter alles erlauben können und Wohnungen auch mit schlechten Energieausweisen leicht vermietet bekommen.
-- Bottleneck für die Maßnahmen im Bestand sind evtl. die Handwerker/Heizungsbauer/etc., die meistens nicht geschult sind in Sachen Energieeffizienz und neue, energiesparende Technologien.
+- Mieter\*innen haben es schwer Vermieter\*innen zu überzeugen Sanierungen zu starten, da Vermieter\*innen wenig davon profitieren.
+- Zusätzlich ist die Lage am Mietmarkt gerade so eng, dass sich Vermieter\*innen alles erlauben können und Wohnungen auch mit schlechten Energieausweisen leicht vermietet bekommen.
+- Bottleneck für die Maßnahmen im Bestand sind evtl. die Handwerker\*innen/Heizungsbauer\*innen/etc., die meistens nicht geschult sind in Sachen Energieeffizienz und neue, energiesparende Technologien.
 
 ## Annahmen
 
-- Mieter möchten Energiesanierungen
+- Mieter\*innen möchten Energiesanierungen
   - Grund 1: Einsparungen
   - Grund 2: Bewusstsein für CO2 Footprint wächst
-- Vermieter sind bereit zu sanieren, wenn das langfristig monetäre Erträge bringt
+- Vermieter\*innen sind bereit zu sanieren, wenn das langfristig monetäre Erträge bringt
 - Das Thema wird weiter gefördert
 - In absehbarer Zeit wird der Vermieter einen Teil der CO2-Kosten tragen müssen.
 
 ## Lösung
 
-Eine Softwareplattform, die es Mietern ermöglicht die (Daten ihrer Wohnung einzutragen oder Bilder ihrer Abrechnungen hochzuladen) und daraus Modelle für den Vermieter vorbereitet, warum eine Investition Sinn ergibt.
+Eine Softwareplattform, die es Mieter\*innen ermöglicht die (Daten ihrer Wohnung einzutragen oder Bilder ihrer Abrechnungen hochzuladen) und daraus Modelle für den Vermieter\*innen vorbereitet, warum eine Investition Sinn ergibt.
 
 ## Featureideen
 
@@ -28,7 +28,7 @@ Eine Softwareplattform, die es Mietern ermöglicht die (Daten ihrer Wohnung einz
 - Erfassung der Energiesituation
 - Berichte erstellen
 - Argumentationsstrategien bereitstellen
-- Weiterleitung an Umsetzer
+- Weiterleitung an Umsetzer\*innen
 
 ### Nice to haves
 
@@ -50,4 +50,4 @@ Infrastruktur für CO2 Modelle
 
 - Was ist mit öffentlichen Gebäuden?
 - Welche Rolle spielt das Thema bei den Mietervereinen?
-  - Gibt es Präzedenzfälle, in denen Eigentümer dazu verpflichtet wurden, energetisch zu sanieren? Wenn es eine Möglichkeit gäbe, aufgrund relativ hoher Energiekosten wegen schlechter Dämmung die Miete zu mindern, dann wäre das ja sehr interessant...
+  - Gibt es Präzedenzfälle, in denen Eigentümer\*innen dazu verpflichtet wurden, energetisch zu sanieren? Wenn es eine Möglichkeit gäbe, aufgrund relativ hoher Energiekosten wegen schlechter Dämmung die Miete zu mindern, dann wäre das ja sehr interessant...
