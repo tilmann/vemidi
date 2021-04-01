@@ -1,24 +1,22 @@
-# Vemidi
+# Vemidi - CO2 einsparen für Mieter:innen und Vermieter:innen
 
 ## 1. Beschreibe dein Projekt kurz.
 
-Vemidi hilft CO2-Emissionen in vermieten Immobilien einzusparen und die Emissionen im Gebäudesektor bis 2030 um über 50% (NOTE: https://www.umweltbundesamt.de/presse/pressemitteilungen/treibhausgasemissionen-sinken-2020-um-87-prozent) zu reduzieren.
+Vemidi hilft CO2-Emissionen in vermieten Immobilien einzusparen und die [Emissionen im Gebäudesektor bis 2030 um über 50%](https://www.umweltbundesamt.de/presse/pressemitteilungen/treibhausgasemissionen-sinken-2020-um-87-prozent) zu reduzieren.
 
-Vemidi ist eine Webanwendung, die aufzeigt warum und wie energetische Sanierungen für Mieter\*innen und Vermieter\*innen fair und datengestützt umgesetzt werden können.
-
-Vemidi ist eine Webanwendung um Wohnungs- und Abrechnungsdaten einfach zu erfassen und daraus Handlungsempfehlungen für Mieter\*innen und Vermieter\*innen fair und datengestützt darzustellen und so CO2 und Kosten zu sparen.
+Vemidi erfasst Wohnungs- und Abrechnungsdaten und begleitet die daraus entstandenen Handlungsempfehlungen für Mieter:innen und Vermieter:innen.
 
 ### Problem
 
-1. Richtiges Heizverhalten ist schwierig zu bewerten und die Selbsteinschätzung von Mieter\*innen ist oftmals falsch.
+1. Richtiges Heizverhalten ist schwierig zu bewerten und die Selbsteinschätzung von Mieter:innen ist oftmals falsch.
 
-2. Energetische Sanierungen von Mietwohnungen sind für Mieter\*innen und Vermieter\*innen ein Konfliktthema, da die Investitionen und "gewonnenen" Einsparungen auf Kosten und CO2 Seite nicht transparent sind.
+2. Energetische Sanierungen von Mietwohnungen sind für Mieter:innen und Vermieter:innen ein Konfliktthema, da die Investitionen und "gewonnenen" Einsparungen auf Kosten und CO2 Seite nicht transparent sind.
 
-   - Für Mieter\*innen entsteht durch eine energetische Sanierung meist ein finanzieller Nachteil: die Kosten werden auf ihre Miete umgelegt, die Nebenkosten sinken allerdings in der Regel nur um einen Bruchteil der Mietsteigerung (Sanierung ist nicht warmmietenneutral).
+   - Für Mieter:innen entsteht durch eine energetische Sanierung meist ein finanzieller Nachteil: die Kosten werden auf ihre Miete umgelegt, die Nebenkosten sinken allerdings in der Regel nur um einen Bruchteil der Mietsteigerung (Sanierung ist nicht warmmietenneutral).
 
-   - Für Vermieter\*innen bedeutet eine energetische Sanierung eine große Investition, die sich für sie finanziell frühestens nach zwölf Jahren lohnt. Gleichzeitig birgt eine Sanierung ein hohes Konfliktpotential mit den Mieter\*innen.
+   - Für Vermieter:innen bedeutet eine energetische Sanierung eine große Investition, die sich für sie finanziell frühestens nach zwölf Jahren lohnt. Gleichzeitig birgt eine Sanierung ein hohes Konfliktpotential mit den Mieter:innen.
 
-3. Engpass für die passenden Maßnahmen im Bestand sind evtl. die Handwerker\*innen / Heizungsbauer\*innen / etc., die
+3. Engpass für die passenden Maßnahmen im Bestand sind evtl. die Handwerker:innen / Heizungsbauer:innen / etc., die
 
    - In Sachen Energieeffizienz und neue, energiesparende Technologien nicht geschult sind _oder_
 
@@ -29,35 +27,35 @@ Vemidi ist eine Webanwendung um Wohnungs- und Abrechnungsdaten einfach zu erfass
 ### Annahmen
 
 - Heizkostenabrechnungen enthalten Hinweise, wie das Heizverhalten im Haus und der eigenen Wohnung zu bewerten ist.
-- Mieter\*innen möchten energetische Sanierungen, wenn sich die Gesamtkosten (Kaltmiete plus Energiekosten) für die Wohnung langfristig nicht übermäßig erhöhen.
-- Bei Mieter\*innen wächst das Bewusstsein für den CO2 Footprint und der Bedarf diesen zu senken steigt.
-- Vermieter\*innen sind bereit zu sanieren, wenn es die Rendite nicht übermäßig schmälert und CO2 Einsparungen bringt.
+- Mieter:innen möchten energetische Sanierungen, wenn sich die Gesamtkosten (Kaltmiete plus Energiekosten) für die Wohnung langfristig nicht übermäßig erhöhen.
+- Bei Mieter:innen wächst das Bewusstsein für den CO2 Footprint und der Bedarf diesen zu senken steigt.
+- Vermieter:innen sind bereit zu sanieren, wenn es die Rendite nicht übermäßig schmälert und CO2 Einsparungen bringt.
 - Das Thema wird weiter gefördert
-- In absehbarer Zeit wird Vermieter\*innen einen Teil der CO2-Kosten tragen müssen.
+- In absehbarer Zeit wird Vermieter:innen einen Teil der CO2-Kosten tragen müssen.
 
 ### Lösung
 
-Eine Webanwendung, die es Mieter\*innen ermöglicht die Daten zur Wohnung einzutragen und Bilder ihrer Strom- und Heizabrechnungen hochzuladen und daraus Handlungsoptionen, Berichte und Modelle für Mieter\*innen und Vermieter\*innen aufbereitet. Die Berichte und Modelle zeigen auf, warum eine energetische Sanierung für beide Seiten langfristig Sinn ergibt, welcher Sanierungsweg sich anbietet und und wie diese "fair" abgebildet werden kann.
+Eine Webanwendung, die es Mieter:innen ermöglicht die Daten zur Wohnung einzutragen und Bilder ihrer Strom- und Heizabrechnungen hochzuladen und daraus Handlungsoptionen, Berichte und Modelle für Mieter:innen und Vermieter:innen aufbereitet. Die Berichte und Modelle zeigen auf, warum eine energetische Sanierung für beide Seiten langfristig Sinn ergibt, welcher Sanierungsweg sich anbietet und und wie diese "fair" abgebildet werden kann.
 
-Diese Informationen sollen Mieter\*innen und Vermieter\*innen anstoßen mit Energieberater\*innen ins Gespräch zu gehen und Projekte zu starten.
+Diese Informationen sollen Mieter:innen und Vermieter:innen anstoßen mit Energieberater:innen ins Gespräch zu gehen und Projekte zu starten.
 
 Die aufbereiteten Daten sollen verwendet werden können, um eine Beantragung von Fördermitteln zu vereinfachen.
 
-Langfristig können Energieberater\*innen und Handwerker\*innen eingebunden werden um eine passende Umsetzung einfacher zu beauftragen.
+Langfristig können Energieberater:innen und Handwerker:innen eingebunden werden um eine passende Umsetzung einfacher zu beauftragen.
 
-Im [Papier von Agora](https://static.agora-energiewende.de/fileadmin/Projekte/2020/2020_07_Warmmieten/A-EW_190_Mieterschutz_Klimaschutz_WEB.pdf) wird argumentiert, dass _Warmmieten mit Temperaturfeedback_ das Vermieter-Mieter-Dilemma auflösen können. Wir glauben, dass umfangreiche Aufklärungsarbeit geleistet werden muss, die aufzeigt, dass dies eine faire Lösung ist, die die Interessen von Mieter\*innen und Vermieter\*innen miteinander vereinbart und dabei hilft, die Klimaziele im Gebäudesektor zu erreichen.
+Im [Papier von Agora](https://static.agora-energiewende.de/fileadmin/Projekte/2020/2020_07_Warmmieten/A-EW_190_Mieterschutz_Klimaschutz_WEB.pdf) wird argumentiert, dass _Warmmieten mit Temperaturfeedback_ das Vermieter-Mieter-Dilemma auflösen können. Wir glauben, dass umfangreiche Aufklärungsarbeit geleistet werden muss, die aufzeigt, dass dies eine faire Lösung ist, die die Interessen von Mieter:innen und Vermieter:innen miteinander vereinbart und dabei hilft, die Klimaziele im Gebäudesektor zu erreichen.
 
 ## 2. Welches gesellschaftliche Problem willst du mit deinem Projekt lösen?
 
 Im Jahr 2020 hat aus allen Sektoren [nur der Gebäudesektor die Klimaziele für Deutschland gerissen](https://www.umweltbundesamt.de/presse/pressemitteilungen/treibhausgasemissionen-sinken-2020-um-87-prozent). Es besteht ein dringender Bedarf Altbestand zu sanieren, um die Klimaziele für Deutschland im Bereich Gebäude zu erreichen.
 
-Stand heute sind die Interessenlagen von Mieter\*innen und Vermieter\*innen nicht gleichgerichtet. Der Mietmarkt in Deutschland basiert im Allgemeinen auf Kaltmieten. Dies bedeutet, dass Mieter\*innen die anfallenden Heizkosten tragen, was zum Vermieter-Mieter-Dilemma führt:
+Stand heute sind die Interessenlagen von Mieter:innen und Vermieter:innen nicht gleichgerichtet. Der Mietmarkt in Deutschland basiert im Allgemeinen auf Kaltmieten. Dies bedeutet, dass Mieter:innen die anfallenden Heizkosten tragen, was zum Vermieter-Mieter-Dilemma führt:
 
-Während Vermieter\*innen für die Kosten einer energetischen Sanierung aufkommen, profitieren zunächst nur Mieter\*innen durch reduzierte Heizkosten. Vermieter\*innen legen die Kosten daher auf die Mieter\*innen in Form der Kaltmiete um, was zu Intransparenz führt.
+Während Vermieter:innen für die Kosten einer energetischen Sanierung aufkommen, profitieren zunächst nur Mieter:innen durch reduzierte Heizkosten. Vermieter:innen legen die Kosten daher auf die Mieter:innen in Form der Kaltmiete um, was zu Intransparenz führt.
 
-Mieter\*innen können ihre Heizkosten nur durch eine Verbrauchsreduktion beeinflussen, denn auf die Heizungsart und den Wärmebedarf der Wohnung haben sie keinen direkten Einfluss.
+Mieter:innen können ihre Heizkosten nur durch eine Verbrauchsreduktion beeinflussen, denn auf die Heizungsart und den Wärmebedarf der Wohnung haben sie keinen direkten Einfluss.
 
-Vemidi kann helfen die CO2 Emissionen durch Gebäude zu senken und bringt Mieter\*innen und Vermieter\*innen zusammen und hilft ihnen durch ein besseres Verständnis gemeinsam Geld und CO2 zu sparen.
+Vemidi kann helfen die CO2 Emissionen durch Gebäude zu senken und bringt Mieter:innen und Vermieter:innen zusammen und hilft ihnen durch ein besseres Verständnis gemeinsam Geld und CO2 zu sparen.
 
 ## 3. Wie willst du dein Projekt technisch umsetzen?
 
@@ -98,22 +96,22 @@ In Deutschland ist das bekannteste Werkzeug zur Aufklärung in diesem Bereich da
 
 Im Test hat sich gezeigt, dass die manuelle Erfassung der Daten zur Wohnung aus den Abrechnungen fehlerbehaftet ist.
 
-Bislang wird von co2online.de das Problem der Kommunikation zwischen Mieter\*innen und Vermieter\*innen nicht adressiert. Es gibt keine Berichte und Modelle, die zusammenfassen warum eine Sanierung für beide Seiten Sinn ergeben kann. Eine langfristige Anlage einer Wohnung und das Abbilden der Maßnahmen ist nicht möglich.
+Bislang wird von co2online.de das Problem der Kommunikation zwischen Mieter:innen und Vermieter:innen nicht adressiert. Es gibt keine Berichte und Modelle, die zusammenfassen warum eine Sanierung für beide Seiten Sinn ergeben kann. Eine langfristige Anlage einer Wohnung und das Abbilden der Maßnahmen ist nicht möglich.
 
-Wir glauben, dass Vemidi hier Mieter\*innen und Vermieter\*innen durch ein einfacheres und zielgerichteteres Angebot einen klaren Mehrwert bieten kann und sich ausreichend von co2online.de abgrenzt.
+Wir glauben, dass Vemidi hier Mieter:innen und Vermieter:innen durch ein einfacheres und zielgerichteteres Angebot einen klaren Mehrwert bieten kann und sich ausreichend von co2online.de abgrenzt.
 
 ## 5. Wer ist die Zielgruppe und wie soll dein Tool sie erreichen?
 
-Die Customer Journey von von Vemidi startet bei Mieter\*innen. Wir glauben, dass Mieter\*innen zwei Motivationen haben energieeffizienter zu Wohnen:
+Die Customer Journey von von Vemidi startet bei Mieter:innen. Wir glauben, dass Mieter:innen zwei Motivationen haben energieeffizienter zu Wohnen:
 
 - Grund 1: Monetäre Einsparungen
 
 - Grund 2: Bewusstsein für CO2 Bilanz wächst
 
-Mieter\*innen sollen befähigt werden professionell, fair und datengestützt mit dem Vermieter ins Gespräch zu gehen um eine energetische Sanierung fair zu gestalten.
+Mieter:innen sollen befähigt werden professionell, fair und datengestützt mit dem Vermieter ins Gespräch zu gehen um eine energetische Sanierung fair zu gestalten.
 
-Unsere Idee ist zu Beginn Wohnungsbaugenossenschaften für Pilotprojekte zu überzeugen. Da die Mitglieder\*innen Genossenschaftsanteile halten, sind die Ziele bereits besser harmonisiert.
+Unsere Idee ist zu Beginn Wohnungsbaugenossenschaften für Pilotprojekte zu überzeugen. Da die Mitglieder:innen Genossenschaftsanteile halten, sind die Ziele bereits besser harmonisiert.
 
 Weiterhin ist es geplant eine Partnerschaft mit Mietervereinen und anderen Verbraucherorganisationen aufzubauen. Mietervereine suchen nach Möglichkeiten, um die nötigen energetischen Sanierungen passend aufzubereiten und haben einen vertrauensvollen Zugang zu Mietern.
 
-Weiterhin soll Pressearbeit erfolgen um in überregionalen Publikationen aufzutauchen. Wir glauben, dass Vemidi ein Angebot ist, dass für viele Mieter\*innen interessante Einsparpotenziale für Kosten und CO2 bietet.
+Weiterhin soll Pressearbeit erfolgen um in überregionalen Publikationen aufzutauchen. Wir glauben, dass Vemidi ein Angebot ist, dass für viele Mieter:innen interessante Einsparpotenziale für Kosten und CO2 bietet.
