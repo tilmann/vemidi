@@ -1,6 +1,6 @@
 # Vemidi - CO2 einsparen für Mieter:innen und Vermieter:innen
 
-## 1. Beschreibe dein Projekt kurz.
+## Kurzbeschreibung
 
 Vemidi hilft CO2-Emissionen in vermieten Immobilien einzusparen und die [Emissionen im Gebäudesektor bis 2030 um über 50%](https://www.umweltbundesamt.de/presse/pressemitteilungen/treibhausgasemissionen-sinken-2020-um-87-prozent) zu reduzieren.
 
@@ -45,7 +45,7 @@ Langfristig können Energieberater:innen und Handwerker:innen eingebunden werden
 
 Im [Papier von Agora](https://static.agora-energiewende.de/fileadmin/Projekte/2020/2020_07_Warmmieten/A-EW_190_Mieterschutz_Klimaschutz_WEB.pdf) wird argumentiert, dass _Warmmieten mit Temperaturfeedback_ das Vermieter-Mieter-Dilemma auflösen können. Wir glauben, dass umfangreiche Aufklärungsarbeit geleistet werden muss, die aufzeigt, dass dies eine faire Lösung ist, die die Interessen von Mieter:innen und Vermieter:innen miteinander vereinbart und dabei hilft, die Klimaziele im Gebäudesektor zu erreichen.
 
-## 2. Welches gesellschaftliche Problem willst du mit deinem Projekt lösen?
+## Gesellschaftlicher Impact
 
 Im Jahr 2020 hat aus allen Sektoren [nur der Gebäudesektor die Klimaziele für Deutschland gerissen](https://www.umweltbundesamt.de/presse/pressemitteilungen/treibhausgasemissionen-sinken-2020-um-87-prozent). Es besteht ein dringender Bedarf Altbestand zu sanieren, um die Klimaziele für Deutschland im Bereich Gebäude zu erreichen.
 
@@ -57,7 +57,7 @@ Mieter:innen können ihre Heizkosten nur durch eine Verbrauchsreduktion beeinflu
 
 Vemidi kann helfen die CO2 Emissionen durch Gebäude zu senken und bringt Mieter:innen und Vermieter:innen zusammen und hilft ihnen durch ein besseres Verständnis gemeinsam Geld und CO2 zu sparen.
 
-## 3. Wie willst du dein Projekt technisch umsetzen?
+## Technische Umsetzung
 
 Ziel ist es eine Webanwendung bereit zu stellen.
 
@@ -78,7 +78,7 @@ Der Code wird auf Github gehostet und es werden die dort bereitstehenden Werkzeu
 
 Für das Hosting und die Build Pipeline des Projektes passen die Programme AWS Activate mit 1000 Euro AWS Guthaben oder Microsofts AI for Earth Grants mit 5000 Euro Azure Guthaben.
 
-## 4. Welche ähnlichen Lösungen gibt es schon und was wird dein Projekt anders bzw. besser machen?
+## Andere Marktteilnehmer und Angebote
 
 ### CO2-Bilanz Rechner
 
@@ -100,7 +100,7 @@ Bislang wird von co2online.de das Problem der Kommunikation zwischen Mieter:inne
 
 Wir glauben, dass Vemidi hier Mieter:innen und Vermieter:innen durch ein einfacheres und zielgerichteteres Angebot einen klaren Mehrwert bieten kann und sich ausreichend von co2online.de abgrenzt.
 
-## 5. Wer ist die Zielgruppe und wie soll dein Tool sie erreichen?
+## Zielgruppe und GoToMarket
 
 Die Customer Journey von von Vemidi startet bei Mieter:innen. Wir glauben, dass Mieter:innen zwei Motivationen haben energieeffizienter zu Wohnen:
 
@@ -115,3 +115,21 @@ Unsere Idee ist zu Beginn Wohnungsbaugenossenschaften für Pilotprojekte zu übe
 Weiterhin ist es geplant eine Partnerschaft mit Mietervereinen und anderen Verbraucherorganisationen aufzubauen. Mietervereine suchen nach Möglichkeiten, um die nötigen energetischen Sanierungen passend aufzubereiten und haben einen vertrauensvollen Zugang zu Mietern.
 
 Weiterhin soll Pressearbeit erfolgen um in überregionalen Publikationen aufzutauchen. Wir glauben, dass Vemidi ein Angebot ist, dass für viele Mieter:innen interessante Einsparpotenziale für Kosten und CO2 bietet.
+
+## Warum jetzt
+
+Bislang waren die größte Blocker nach Aussage von Energieberater:
+
+- Förderung erst seit 2019
+- Programm: Heiztaustausch plus
+- Das Programm wurde so gut angenommen, dass bereits dreimal Geld nachgeschoßen wurde
+
+## Offene Herausforderungen
+
+- Es gibt zuwenig Fachfirmen - die Anzahl müsste sich verdoppeln
+- Heizverhalten verändern ist nicht einfach
+  - Mehrheit heizt falsch
+  - Verhalten ist "gelernt"
+- Nutzer und Gebäude
+  - Jedes Ableseunternehmen macht das anders
+  - Energieberater brauchen Zeit um die Daten zu finden
