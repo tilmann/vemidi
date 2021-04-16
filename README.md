@@ -116,6 +116,16 @@ Weiterhin ist es geplant eine Partnerschaft mit Mietervereinen und anderen Verbr
 
 Weiterhin soll Pressearbeit erfolgen um in überregionalen Publikationen aufzutauchen. Wir glauben, dass Vemidi ein Angebot ist, dass für viele Mieter:innen interessante Einsparpotenziale für Kosten und CO2 bietet.
 
+## Die optimale Wohnung
+
+Aus Gesprächen mit Experten haben wir gelernt, dass der Markt sich stark aufteilt. Während die professionellen Eigentümer bereits eigene Teams aufgebaut haben, die sich mit dem Prozess der energetischen Sanierung beschäftigen, werden die Privatpersonen, die Wohnungen besitzen heute nicht angesprochen.
+
+Laut den Ergebnissen des Zensus werden deutschlandweit rund 52 Prozent aller Wohnungen zur Miete angeboten. Die Mietwohnungen befinden sich zu etwa zwei Dritteln im Eigentum von Privatpersonen. Ein weiteres Fünftel des Mietwohnungsbestandes gehört der Öffentlichen Hand und Genossenschaften.
+
+![Eigentümer](docs/assets/readme_eigentuemer.png) [Quelle](https://www.immobilienmanager.de/das-sind-die-groessten-wohnungseigentuemer-in-deutschland/150/67019/)
+
+Assumption: Eine optimale Wohnung gehört einer Privatperson.
+
 ## Warum jetzt
 
 Bislang waren die größte Blocker nach Aussage von Energieberater:
