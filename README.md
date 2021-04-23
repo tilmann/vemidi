@@ -6,15 +6,17 @@ Vemidi hilft CO2-Emissionen in vermieten Immobilien einzusparen und die [Emissio
 
 Vemidi erfasst Wohnungs- und Abrechnungsdaten und begleitet die daraus entstandenen Handlungsempfehlungen für Mieter:innen und Vermieter:innen.
 
+[Zusammenfassung - Folien Ende April](https://github.com/tilmann/vemidi/docs/assets/21_04_18_Vemidi_summary.pdf)
+
 ### Problem
 
 1. Richtiges Heizverhalten ist schwierig zu bewerten und die Selbsteinschätzung von Mieter:innen ist oftmals falsch.
 
 2. Energetische Sanierungen von Mietwohnungen sind für Mieter:innen und Vermieter:innen ein Konfliktthema, da die Investitionen und "gewonnenen" Einsparungen auf Kosten und CO2 Seite nicht transparent sind.
 
-   - Für Mieter:innen entsteht durch eine energetische Sanierung meist ein finanzieller Nachteil: die Kosten werden auf ihre Miete umgelegt, die Nebenkosten sinken allerdings in der Regel nur um einen Bruchteil der Mietsteigerung (Sanierung ist nicht warmmietenneutral).
+   - Mieter:innen haben Angst, dass durch eine energetische Sanierunge ein finanzieller Nachteil entsteht: die Kosten werden auf ihre Miete umgelegt, die Nebenkosten sinken nur um einen Teil der Mietsteigerung (Sanierung ist nicht warmmietenneutral).
 
-   - Für Vermieter:innen bedeutet eine energetische Sanierung eine große Investition, die sich für sie finanziell frühestens nach zwölf Jahren lohnt. Gleichzeitig birgt eine Sanierung ein hohes Konfliktpotential mit den Mieter:innen.
+   - 75% der private Vermieter:innen sind [nicht einmal grob über den energetischen Zustand ihres Gebäudes](https://initiative-energieeffiziente-gebaeude.de/de/zum-thema) informiert. Eine Sanierung birgt Konfliktpotential mit den Mieter:innen.
 
 3. Engpass für die passenden Maßnahmen im Bestand sind evtl. die Handwerker:innen / Heizungsbauer:innen / etc., die
 
@@ -110,8 +112,6 @@ Die Customer Journey von von Vemidi startet bei Mieter:innen. Wir glauben, dass 
 
 Mieter:innen sollen befähigt werden professionell, fair und datengestützt mit dem Vermieter ins Gespräch zu gehen um eine energetische Sanierung fair zu gestalten.
 
-Unsere Idee ist zu Beginn Wohnungsbaugenossenschaften für Pilotprojekte zu überzeugen. Da die Mitglieder:innen Genossenschaftsanteile halten, sind die Ziele bereits besser harmonisiert.
-
 Weiterhin ist es geplant eine Partnerschaft mit Mietervereinen und anderen Verbraucherorganisationen aufzubauen. Mietervereine suchen nach Möglichkeiten, um die nötigen energetischen Sanierungen passend aufzubereiten und haben einen vertrauensvollen Zugang zu Mietern.
 
 Weiterhin soll Pressearbeit erfolgen um in überregionalen Publikationen aufzutauchen. Wir glauben, dass Vemidi ein Angebot ist, dass für viele Mieter:innen interessante Einsparpotenziale für Kosten und CO2 bietet.
@@ -123,8 +123,6 @@ Aus Gesprächen mit Experten haben wir gelernt, dass der Markt sich stark auftei
 Laut den Ergebnissen des Zensus werden deutschlandweit rund 52 Prozent aller Wohnungen zur Miete angeboten. Die Mietwohnungen befinden sich zu etwa zwei Dritteln im Eigentum von Privatpersonen. Ein weiteres Fünftel des Mietwohnungsbestandes gehört der Öffentlichen Hand und Genossenschaften.
 
 ![Eigentümer](docs/assets/readme_eigentuemer.png) [Quelle](https://www.immobilienmanager.de/das-sind-die-groessten-wohnungseigentuemer-in-deutschland/150/67019/)
-
-Assumption: Eine optimale Wohnung gehört einer Privatperson.
 
 ## Warum jetzt
 
