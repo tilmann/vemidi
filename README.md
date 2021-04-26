@@ -104,11 +104,13 @@ Wir glauben, dass Vemidi hier Mieter:innen und Vermieter:innen durch ein einfach
 
 ## Zielgruppe und GoToMarket
 
-Die Customer Journey von von Vemidi startet bei Mieter:innen. Wir glauben, dass Mieter:innen zwei Motivationen haben energieeffizienter zu Wohnen:
+Die Customer Journey von von Vemidi startet bei Mieter:innen. Wir glauben, dass Mieter:innen drei Motivationen haben energieeffizienter zu Wohnen:
 
-- Grund 1: Monetäre Einsparungen
+Grund 1: Niedrigere Heizkosten
 
-- Grund 2: Bewusstsein für CO2 Bilanz wächst
+Grund 2: Bessere Wohnqualität
+
+Grund 3: Bewusstsein für CO2 Bilanz wächst
 
 Mieter:innen sollen befähigt werden professionell, fair und datengestützt mit dem Vermieter ins Gespräch zu gehen um eine energetische Sanierung fair zu gestalten.
 
