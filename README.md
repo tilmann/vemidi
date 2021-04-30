@@ -6,7 +6,7 @@ Vemidi hilft CO2-Emissionen in vermieten Immobilien einzusparen und die [Emissio
 
 Vemidi erfasst Wohnungs- und Abrechnungsdaten und begleitet die daraus entstandenen Handlungsempfehlungen für Mieter:innen und Vermieter:innen.
 
-[Zusammenfassung - Folien Ende April](https://github.com/tilmann/vemidi/blob/main/docs/assets/21_04_18_Vemidi_summary.pdf)
+[Zusammenfassung - Folien Ende April](https://github.com/tilmann/vemidi/blob/main/docs/assets/21_04_30_Vemidi_summary.pdf)
 
 ### Problem
 
