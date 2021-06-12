@@ -1,8 +1,6 @@
+import { Link, navigate, routes } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
-import { Link, routes, navigate } from '@redwoodjs/router'
-
-import { QUERY } from 'src/components/FlatsCell'
 
 const DELETE_FLAT_MUTATION = gql`
   mutation DeleteFlatMutation($id: String!) {

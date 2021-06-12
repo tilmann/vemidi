@@ -3,13 +3,10 @@ import { useState } from 'react'
 
 const AuthUi = () => {
   const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-
-  const { logIn, logOut, signUp, isAuthenticated } = useAuth()
+  const { logIn, logOut, isAuthenticated } = useAuth()
 
   const resetForm = () => {
     setEmail('')
-    setPassword('')
   }
 
   return (
@@ -22,20 +19,13 @@ const AuthUi = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <input
-          type="password"
-          placeholder="password"
-          value={password}
-          required
-          onChange={(e) => setPassword(e.target.value)}
-        />
       </form>
       <button
-        disabled={(!email.length || !password.length) && !isAuthenticated}
+        disabled={!email.length && !isAuthenticated}
         onClick={async () => {
           if (!isAuthenticated && email.length) {
             try {
-              await logIn({ email, password })
+              await logIn({ email })
               resetForm()
             } catch (e) {
               console.log(e)
@@ -49,26 +39,6 @@ const AuthUi = () => {
       >
         {isAuthenticated ? 'Log Out' : 'Log In'}
       </button>
-      {!isAuthenticated && (
-        <button
-          disabled={(!email.length || !password.length) && !isAuthenticated}
-          onClick={async () => {
-            if (!isAuthenticated && email.length && password.length) {
-              try {
-                await signUp({ email, password })
-
-                resetForm()
-              } catch (e) {
-                const supabaseError = JSON.parse(e.message)
-                alert(supabaseError.msg)
-                console.log(e)
-              }
-            }
-          }}
-        >
-          Sign Up
-        </button>
-      )}
     </>
   )
 }
