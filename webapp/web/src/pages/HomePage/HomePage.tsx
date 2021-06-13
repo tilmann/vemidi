@@ -15,7 +15,6 @@
 // }
 import { StarIcon } from '@heroicons/react/solid'
 import { Link, routes } from '@redwoodjs/router'
-import Header from '../../components/Header/Header'
 
 const stats = [
   { label: 'Founded', value: '2021' },
@@ -126,8 +125,7 @@ const footerNavigation = {
 const HomePage = () => {
   return (
     <>
-      <Header />
-      <div className="bg-white">
+      <div className="rounded-lg bg-white overflow-hidden shadow">
         <main>
           {/* Hero section */}
           <div className="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
@@ -142,7 +140,7 @@ const HomePage = () => {
                 </div>
                 <div className="mt-20">
                   <div>
-                    <Link to={routes.flats()}>
+                    <Link to={routes.dashboard()}>
                       <a href="#" className="inline-flex space-x-4">
                         <span className="rounded bg-indigo-50 px-2.5 py-1 text-xs font-semibold text-indigo-500 tracking-wide uppercase">
                           FAIRE MODELLE FÜR MIETER:INNEN UND VERMIETER:INNEN

@@ -1,11 +1,11 @@
 import { render } from '@redwoodjs/testing'
 
-import Header from './Header'
+import LandingLayout from './LandingLayout'
 
-describe('Header', () => {
+describe('LandingLayout', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<Header />)
+      render(<LandingLayout />)
     }).not.toThrow()
   })
 })

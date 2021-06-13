@@ -8,7 +8,7 @@ const navigation = [
   // { name: 'Company', href: '#' },
 ]
 
-const Header = () => {
+const HeaderLanding = () => {
   const { isAuthenticated, logOut } = useAuth()
 
   async function logout() {
@@ -91,4 +91,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default HeaderLanding
