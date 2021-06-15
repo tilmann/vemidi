@@ -1,13 +1,38 @@
-import { LockClosedIcon } from '@heroicons/react/solid'
+import { CheckCircleIcon, LockClosedIcon } from '@heroicons/react/solid'
 import { useAuth } from '@redwoodjs/auth'
 import { useState } from 'react'
 
 const AuthUi = () => {
   const [email, setEmail] = useState('')
+  const [acceptTerms, setAcceptTerms] = useState(false)
+  const [waitingForConfirmation, setWaitingForConfirmation] = useState(false)
   const { logIn, logOut, isAuthenticated, loading } = useAuth()
 
   const resetForm = () => {
     setEmail('')
+    setAcceptTerms(false)
+  }
+
+  function toggleAcceptTerms() {
+    setAcceptTerms(!acceptTerms)
+  }
+
+  async function requestMagicLink(e) {
+    e.preventDefault()
+    if (!isAuthenticated && email.length) {
+      try {
+        setWaitingForConfirmation(true)
+        await logIn({ email })
+        resetForm()
+      } catch (e) {
+        console.log(e)
+        const supabaseError = JSON.parse(e.message)
+        alert(supabaseError.error_description)
+        setWaitingForConfirmation(false)
+      }
+    } else {
+      await logOut()
+    }
   }
 
   return (
@@ -19,6 +44,33 @@ const AuthUi = () => {
               Magic Link anfordern
             </h2>
           </div>
+          {waitingForConfirmation /* This example requires Tailwind CSS v2.0+ */ && (
+            <div className="rounded-md bg-yellow-50 p-4 mt-8">
+              <div className="flex">
+                <div className="flex-shrink-0">
+                  <CheckCircleIcon
+                    className="h-5 w-5 text-green-400"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div className="ml-3">
+                  <h3 className="text-sm font-medium text-green-800">
+                    E-Mailbestätigung gesendet
+                  </h3>
+                  <div className="mt-2 text-sm text-green-700">
+                    <p>
+                      Wir haben eine E-Mail an die angegebene Adresse gesendet.
+                      Bitte klicken Sie auf den Bestätigungslink in dieser
+                      E-Mail um mit dem Onboarding fortzufahren. <br />
+                      <br />
+                      Falls Sie keine E-Mail bekommen haben überprüfen Sie bitte
+                      ihren Spam Ordner oder füllen Sie das Formular erneut aus.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
           <form className="mt-8 space-y-6">
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="rounded-md shadow-sm -space-y-px">
@@ -47,6 +99,10 @@ const AuthUi = () => {
                   id="terms"
                   name="terms"
                   type="checkbox"
+                  checked={acceptTerms}
+                  onClick={(e) => {
+                    toggleAcceptTerms()
+                  }}
                   className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
                 />
                 <label
@@ -70,23 +126,9 @@ const AuthUi = () => {
             <div>
               <button
                 type="submit"
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                disabled={!email.length && !isAuthenticated}
-                onClick={async (e) => {
-                  e.preventDefault()
-                  if (!isAuthenticated && email.length) {
-                    try {
-                      await logIn({ email })
-                      resetForm()
-                    } catch (e) {
-                      console.log(e)
-                      const supabaseError = JSON.parse(e.message)
-                      alert(supabaseError.error_description)
-                    }
-                  } else {
-                    await logOut()
-                  }
-                }}
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:cursor-not-allowed disabled:opacity-40"
+                disabled={!acceptTerms || !email.length}
+                onClick={async (e) => requestMagicLink(e)}
               >
                 <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                   <LockClosedIcon
