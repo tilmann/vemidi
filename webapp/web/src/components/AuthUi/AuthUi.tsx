@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 const AuthUi = () => {
   const [email, setEmail] = useState('')
-  const { logIn, logOut, isAuthenticated } = useAuth()
+  const { logIn, logOut, isAuthenticated, loading } = useAuth()
 
   const resetForm = () => {
     setEmail('')

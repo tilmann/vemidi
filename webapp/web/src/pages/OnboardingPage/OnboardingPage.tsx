@@ -6,13 +6,14 @@ import OnboardingSteps from '../../components/OnboardingSteps/OnboardingSteps'
 import UploadFile from '../../components/UploadFile/UploadFile'
 
 const OnboardingPage = () => {
-  const { isAuthenticated } = useAuth()
+  const { isAuthenticated, reauthenticate } = useAuth()
   const [currentStep, setCurrentStep] = useState(0)
   const stepOneSuccess = () => {
     setCurrentStep(currentStep + 1)
   }
 
-  if (isAuthenticated && currentStep === 0) stepOneSuccess()
+  if (currentStep !== 0 && !isAuthenticated) setCurrentStep(0)
+  if (currentStep === 0 && isAuthenticated) setCurrentStep(1)
 
   return (
     <div className="rounded-lg bg-white overflow-hidden shadow">

@@ -1,16 +1,12 @@
 import { useAuth } from '@redwoodjs/auth'
-import { createClient } from '@supabase/supabase-js'
 import { useState } from 'react'
 
 const UploadFile = () => {
   const [uploading, setUploading] = useState<boolean>(false)
 
-  const { currentUser } = useAuth()
+  const { currentUser, client } = useAuth()
 
-  const supabase = createClient(
-    process.env.SUPABASE_URL,
-    process.env.SUPABASE_KEY
-  )
+  const supabase = client
 
   async function uploadFile(event) {
     try {

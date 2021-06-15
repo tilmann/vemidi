@@ -1,5 +1,5 @@
 import { useAuth } from '@redwoodjs/auth'
-import { Link, routes } from '@redwoodjs/router'
+import { Link, navigate, routes } from '@redwoodjs/router'
 
 const navigation = [
   // { name: 'Solutions', href: '#' },
@@ -9,10 +9,13 @@ const navigation = [
 ]
 
 const HeaderLanding = () => {
-  const { isAuthenticated, logOut } = useAuth()
+  const { isAuthenticated, logOut, reauthenticate } = useAuth()
 
-  async function logout() {
+  async function logout(e) {
+    e.preventDefault()
     await logOut()
+    await reauthenticate()
+    navigate(routes.onboarding())
   }
 
   return (
@@ -44,7 +47,7 @@ const HeaderLanding = () => {
             <div className="ml-10 space-x-4">
               <Link
                 to={routes.onboarding()}
-                onClick={logout}
+                onClick={(e) => logout(e)}
                 className="inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75"
               >
                 Log out
@@ -61,7 +64,6 @@ const HeaderLanding = () => {
             <div className="ml-10 space-x-4">
               <Link
                 to={routes.onboarding()}
-                onClick={logout}
                 className="inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75"
               >
                 Einloggen
