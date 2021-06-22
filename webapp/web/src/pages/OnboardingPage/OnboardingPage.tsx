@@ -8,8 +8,10 @@ import UploadFile from '../../components/UploadFile/UploadFile'
 const OnboardingPage = () => {
   const { isAuthenticated, reauthenticate } = useAuth()
   const [currentStep, setCurrentStep] = useState(0)
-  const stepOneSuccess = () => {
+  const [flatId, setFlatId] = useState('')
+  const stepOneSuccess = (flatId) => {
     setCurrentStep(currentStep + 1)
+    setFlatId(flatId)
   }
 
   if (currentStep !== 0 && !isAuthenticated) setCurrentStep(0)
@@ -26,7 +28,7 @@ const OnboardingPage = () => {
         <div className="px-4 py-5 sm:p-6">
           {currentStep === 0 && <AuthUi />}
           {currentStep === 1 && <NewFlat success={stepOneSuccess} />}
-          {currentStep === 2 && <UploadFile />}
+          {currentStep === 2 && <UploadFile flatId={flatId} />}
         </div>
       </div>
     </div>

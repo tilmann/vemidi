@@ -1,13 +1,25 @@
 import { useAuth } from '@redwoodjs/auth'
 import { navigate, routes } from '@redwoodjs/router'
+import { useMutation } from '@redwoodjs/web'
 import { useState } from 'react'
 
-const UploadFile = () => {
+const UploadFile = (props) => {
   const [uploading, setUploading] = useState<boolean>(false)
-
   const { currentUser, client } = useAuth()
-
   const supabase = client
+  const flatId = props.flatId
+  const UPDATE_FLAT_MUTATION = gql`
+    mutation UpdateFlatMutation($id: String!, $input: UpdateFlatInput!) {
+      updateFlat(id: $id, input: $input) {
+        id
+        rawDocUrl
+      }
+    }
+  `
+
+  const [updateFlat, { loading, error }] = useMutation(UPDATE_FLAT_MUTATION, {
+    onCompleted: () => {},
+  })
 
   async function uploadFile(event) {
     try {
@@ -30,6 +42,10 @@ const UploadFile = () => {
       if (uploadError) {
         throw uploadError
       }
+
+      await updateFlat({
+        variables: { id: flatId, input: { rawDocUrl: filePath } },
+      })
       console.log(filePath)
     } catch (error) {
       alert(error.message)
@@ -45,7 +61,7 @@ const UploadFile = () => {
         <div className="max-w-md w-full">
           <div>
             <h2 className="text-center text-3xl font-extrabold text-gray-900">
-              Heizkostenabrechnung hochladen
+              Heizkostenabrechnung hochladen {props.flatId}
             </h2>
           </div>
           <div className="mt-8">

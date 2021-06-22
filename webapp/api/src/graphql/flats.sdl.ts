@@ -1,8 +1,9 @@
 export const schema = gql`
   type Flat {
     id: String!
-    zipCode: String!
+    zipCode: String
     squareMeters: Int
+    rawDocUrl: String
     createdAt: DateTime!
   }
 
@@ -19,6 +20,7 @@ export const schema = gql`
   input UpdateFlatInput {
     zipCode: String
     squareMeters: Int
+    rawDocUrl: String
   }
 
   type Mutation {

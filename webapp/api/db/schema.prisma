@@ -14,7 +14,8 @@ generator client {
 // to create migrations for them and apply to your dev DB.
 model Flat {
   id           String   @id @default(cuid())
-  zipCode      String
+  zipCode      String?
   squareMeters Int?
+  rawDocUrl    String?
   createdAt    DateTime @default(now())
 }

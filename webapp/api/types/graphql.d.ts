@@ -28,8 +28,9 @@ export type CreateFlatInput = {
 export type Flat = {
   __typename?: 'Flat';
   id: Scalars['String'];
-  zipCode: Scalars['String'];
+  zipCode?: Maybe<Scalars['String']>;
   squareMeters?: Maybe<Scalars['Int']>;
+  rawDocUrl?: Maybe<Scalars['String']>;
   createdAt: Scalars['DateTime'];
 };
 
@@ -81,6 +82,7 @@ export type Redwood = {
 export type UpdateFlatInput = {
   zipCode?: Maybe<Scalars['String']>;
   squareMeters?: Maybe<Scalars['Int']>;
+  rawDocUrl?: Maybe<Scalars['String']>;
 };
 
 
@@ -205,8 +207,9 @@ export interface DateTimeScalarConfig extends GraphQLScalarTypeConfig<ResolversT
 
 export type FlatResolvers<ContextType = any, ParentType extends ResolversParentTypes['Flat'] = ResolversParentTypes['Flat']> = {
   id?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-  zipCode?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  zipCode?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   squareMeters?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
+  rawDocUrl?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   createdAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };

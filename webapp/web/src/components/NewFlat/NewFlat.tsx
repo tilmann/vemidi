@@ -11,9 +11,9 @@ const CREATE_FLAT_MUTATION = gql`
 
 const NewFlat = (props) => {
   const [createFlat, { loading, error }] = useMutation(CREATE_FLAT_MUTATION, {
-    onCompleted: () => {
+    onCompleted: (data) => {
       //toast.success('Flat created')
-      props.success()
+      props.success(data.createFlat.id)
       //navigate(routes.flats())
     },
   })
