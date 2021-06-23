@@ -132,11 +132,11 @@ const HomePage = () => {
             <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
               <div>
                 <div>
-                  <img
+                  {/* <img
                     className="h-11 w-auto"
                     src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=500"
                     alt="Workflow"
-                  />
+                  /> */}
                 </div>
                 <div className="mt-20">
                   <div>
@@ -269,7 +269,7 @@ const HomePage = () => {
                 <div className="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12">
                   <img
                     className="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
+                    src="public/vemidi-screenshot-dashboard.png"
                     alt=""
                   />
                 </div>

@@ -5,6 +5,8 @@ export const schema = gql`
     squareMeters: Int
     rawDocUrl: String
     createdAt: DateTime!
+    User: User
+    userId: String
   }
 
   type Query {
@@ -13,14 +15,17 @@ export const schema = gql`
   }
 
   input CreateFlatInput {
-    zipCode: String!
+    zipCode: String
     squareMeters: Int
+    rawDocUrl: String
+    userId: String
   }
 
   input UpdateFlatInput {
     zipCode: String
     squareMeters: Int
     rawDocUrl: String
+    userId: String
   }
 
   type Mutation {

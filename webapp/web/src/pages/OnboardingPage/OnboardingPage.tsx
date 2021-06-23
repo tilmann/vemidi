@@ -1,9 +1,9 @@
 import { useAuth } from '@redwoodjs/auth'
 import { useState } from 'react'
 import AuthUi from '../../components/AuthUi'
-import NewFlat from '../../components/NewFlat'
+import NewFlat from '../../components/Onboarding/NewFlat/NewFlat'
+import UploadFile from '../../components/Onboarding/UploadFile/UploadFile'
 import OnboardingSteps from '../../components/OnboardingSteps/OnboardingSteps'
-import UploadFile from '../../components/UploadFile/UploadFile'
 
 const OnboardingPage = () => {
   const { isAuthenticated, reauthenticate } = useAuth()

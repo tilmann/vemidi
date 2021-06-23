@@ -1,7 +1,8 @@
-import { Prisma } from '@prisma/client'
+import type { Prisma } from '@prisma/client'
+import type { ResolverArgs, BeforeResolverSpecType } from '@redwoodjs/api'
+
 import { db } from 'src/lib/db'
 import { requireAuth } from 'src/lib/auth'
-import { BeforeResolverSpecType } from '@redwoodjs/api'
 
 // Used when the environment variable REDWOOD_SECURE_SERVICES=1
 export const beforeResolver = (rules: BeforeResolverSpecType) => {
@@ -43,4 +44,9 @@ export const deleteFlat = ({ id }: Prisma.FlatWhereUniqueInput) => {
   return db.flat.delete({
     where: { id },
   })
+}
+
+export const Flat = {
+  User: (_obj, { root }: ResolverArgs<ReturnType<typeof flat>>) =>
+    db.flat.findUnique({ where: { id: root.id } }).User(),
 }
