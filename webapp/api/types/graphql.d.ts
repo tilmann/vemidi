@@ -19,8 +19,16 @@ export type Scalars = {
 };
 
 export type CreateFlatInput = {
-  zipCode: Scalars['String'];
+  zipCode?: Maybe<Scalars['String']>;
   squareMeters?: Maybe<Scalars['Int']>;
+  rawDocUrl?: Maybe<Scalars['String']>;
+  userId?: Maybe<Scalars['String']>;
+};
+
+export type CreateUserInput = {
+  id: Scalars['String'];
+  confirmedEmail: Scalars['Boolean'];
+  subscribedToNews: Scalars['Boolean'];
 };
 
 
@@ -32,6 +40,8 @@ export type Flat = {
   squareMeters?: Maybe<Scalars['Int']>;
   rawDocUrl?: Maybe<Scalars['String']>;
   createdAt: Scalars['DateTime'];
+  User?: Maybe<User>;
+  userId?: Maybe<Scalars['String']>;
 };
 
 
@@ -39,13 +49,31 @@ export type Flat = {
 export type Mutation = {
   __typename?: 'Mutation';
   createFlat: Flat;
-  updateFlat: Flat;
+  createUser: User;
   deleteFlat: Flat;
+  deleteUser: User;
+  updateFlat: Flat;
+  updateUser: User;
 };
 
 
 export type MutationCreateFlatArgs = {
   input: CreateFlatInput;
+};
+
+
+export type MutationCreateUserArgs = {
+  input: CreateUserInput;
+};
+
+
+export type MutationDeleteFlatArgs = {
+  id: Scalars['String'];
+};
+
+
+export type MutationDeleteUserArgs = {
+  id: Scalars['String'];
 };
 
 
@@ -55,8 +83,9 @@ export type MutationUpdateFlatArgs = {
 };
 
 
-export type MutationDeleteFlatArgs = {
+export type MutationUpdateUserArgs = {
   id: Scalars['String'];
+  input: UpdateUserInput;
 };
 
 export type Query = {
@@ -64,10 +93,17 @@ export type Query = {
   flat?: Maybe<Flat>;
   flats: Array<Flat>;
   redwood?: Maybe<Redwood>;
+  user?: Maybe<User>;
+  users: Array<User>;
 };
 
 
 export type QueryFlatArgs = {
+  id: Scalars['String'];
+};
+
+
+export type QueryUserArgs = {
   id: Scalars['String'];
 };
 
@@ -83,6 +119,21 @@ export type UpdateFlatInput = {
   zipCode?: Maybe<Scalars['String']>;
   squareMeters?: Maybe<Scalars['Int']>;
   rawDocUrl?: Maybe<Scalars['String']>;
+  userId?: Maybe<Scalars['String']>;
+};
+
+export type UpdateUserInput = {
+  confirmedEmail?: Maybe<Scalars['Boolean']>;
+  subscribedToNews?: Maybe<Scalars['Boolean']>;
+};
+
+export type User = {
+  __typename?: 'User';
+  id: Scalars['String'];
+  confirmedEmail: Scalars['Boolean'];
+  subscribedToNews: Scalars['Boolean'];
+  createdAt: Scalars['DateTime'];
+  flats: Array<Maybe<Flat>>;
 };
 
 
@@ -166,6 +217,8 @@ export type ResolversTypes = {
   CreateFlatInput: CreateFlatInput;
   String: ResolverTypeWrapper<Scalars['String']>;
   Int: ResolverTypeWrapper<Scalars['Int']>;
+  CreateUserInput: CreateUserInput;
+  Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
   Date: ResolverTypeWrapper<Scalars['Date']>;
   DateTime: ResolverTypeWrapper<Scalars['DateTime']>;
   Flat: ResolverTypeWrapper<Flat>;
@@ -176,7 +229,8 @@ export type ResolversTypes = {
   Redwood: ResolverTypeWrapper<Redwood>;
   Time: ResolverTypeWrapper<Scalars['Time']>;
   UpdateFlatInput: UpdateFlatInput;
-  Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
+  UpdateUserInput: UpdateUserInput;
+  User: ResolverTypeWrapper<User>;
 };
 
 /** Mapping between all available schema types and the resolvers parents */
@@ -184,6 +238,8 @@ export type ResolversParentTypes = {
   CreateFlatInput: CreateFlatInput;
   String: Scalars['String'];
   Int: Scalars['Int'];
+  CreateUserInput: CreateUserInput;
+  Boolean: Scalars['Boolean'];
   Date: Scalars['Date'];
   DateTime: Scalars['DateTime'];
   Flat: Flat;
@@ -194,7 +250,8 @@ export type ResolversParentTypes = {
   Redwood: Redwood;
   Time: Scalars['Time'];
   UpdateFlatInput: UpdateFlatInput;
-  Boolean: Scalars['Boolean'];
+  UpdateUserInput: UpdateUserInput;
+  User: User;
 };
 
 export interface DateScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes['Date'], any> {
@@ -211,6 +268,8 @@ export type FlatResolvers<ContextType = any, ParentType extends ResolversParentT
   squareMeters?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   rawDocUrl?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   createdAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>;
+  User?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
+  userId?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
@@ -224,14 +283,19 @@ export interface JsonObjectScalarConfig extends GraphQLScalarTypeConfig<Resolver
 
 export type MutationResolvers<ContextType = any, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = {
   createFlat?: Resolver<ResolversTypes['Flat'], ParentType, ContextType, RequireFields<MutationCreateFlatArgs, 'input'>>;
-  updateFlat?: Resolver<ResolversTypes['Flat'], ParentType, ContextType, RequireFields<MutationUpdateFlatArgs, 'id' | 'input'>>;
+  createUser?: Resolver<ResolversTypes['User'], ParentType, ContextType, RequireFields<MutationCreateUserArgs, 'input'>>;
   deleteFlat?: Resolver<ResolversTypes['Flat'], ParentType, ContextType, RequireFields<MutationDeleteFlatArgs, 'id'>>;
+  deleteUser?: Resolver<ResolversTypes['User'], ParentType, ContextType, RequireFields<MutationDeleteUserArgs, 'id'>>;
+  updateFlat?: Resolver<ResolversTypes['Flat'], ParentType, ContextType, RequireFields<MutationUpdateFlatArgs, 'id' | 'input'>>;
+  updateUser?: Resolver<ResolversTypes['User'], ParentType, ContextType, RequireFields<MutationUpdateUserArgs, 'id' | 'input'>>;
 };
 
 export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
   flat?: Resolver<Maybe<ResolversTypes['Flat']>, ParentType, ContextType, RequireFields<QueryFlatArgs, 'id'>>;
   flats?: Resolver<Array<ResolversTypes['Flat']>, ParentType, ContextType>;
   redwood?: Resolver<Maybe<ResolversTypes['Redwood']>, ParentType, ContextType>;
+  user?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, RequireFields<QueryUserArgs, 'id'>>;
+  users?: Resolver<Array<ResolversTypes['User']>, ParentType, ContextType>;
 };
 
 export type RedwoodResolvers<ContextType = any, ParentType extends ResolversParentTypes['Redwood'] = ResolversParentTypes['Redwood']> = {
@@ -245,6 +309,15 @@ export interface TimeScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes
   name: 'Time';
 }
 
+export type UserResolvers<ContextType = any, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = {
+  id?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  confirmedEmail?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
+  subscribedToNews?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
+  createdAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>;
+  flats?: Resolver<Array<Maybe<ResolversTypes['Flat']>>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
 export type Resolvers<ContextType = any> = {
   Date?: GraphQLScalarType;
   DateTime?: GraphQLScalarType;
@@ -255,6 +328,7 @@ export type Resolvers<ContextType = any> = {
   Query?: QueryResolvers<ContextType>;
   Redwood?: RedwoodResolvers<ContextType>;
   Time?: GraphQLScalarType;
+  User?: UserResolvers<ContextType>;
 };
 
 

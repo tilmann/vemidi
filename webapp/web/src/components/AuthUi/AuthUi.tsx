@@ -22,10 +22,9 @@ const AuthUi = () => {
     if (!isAuthenticated && email.length) {
       try {
         setWaitingForConfirmation(true)
-        await logIn({ email })
+        await logIn({ email, redirectTo: 'http://localhost:8910/dashboard' })
         resetForm()
       } catch (e) {
-        console.log(e)
         const supabaseError = JSON.parse(e.message)
         alert(supabaseError.error_description)
         setWaitingForConfirmation(false)
@@ -44,7 +43,7 @@ const AuthUi = () => {
               Magic Link anfordern
             </h2>
           </div>
-          {waitingForConfirmation /* This example requires Tailwind CSS v2.0+ */ && (
+          {waitingForConfirmation && (
             <div className="rounded-md bg-yellow-50 p-4 mt-8">
               <div className="flex">
                 <div className="flex-shrink-0">
