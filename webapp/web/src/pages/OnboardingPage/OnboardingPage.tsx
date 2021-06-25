@@ -1,5 +1,6 @@
 import { useLazyQuery } from '@apollo/client'
 import { useAuth } from '@redwoodjs/auth'
+import { navigate, routes } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { useEffect, useState } from 'react'
 import AuthUi from '../../components/AuthUi'
@@ -17,6 +18,7 @@ const GET_USER_QUERY = gql`
       createdAt
       flats {
         id
+        rawDocUrl
       }
     }
   }
@@ -32,6 +34,7 @@ const CREATE_USER_MUTATION = gql`
 
 const OnboardingPage = () => {
   const { isAuthenticated, currentUser } = useAuth()
+  const authLoading = useAuth().loading // useAuth().loading
   const [currentStep, setCurrentStep] = useState(0)
   const [flatId, setFlatId] = useState('')
   const stepOneSuccess = (flatId) => {
@@ -39,30 +42,33 @@ const OnboardingPage = () => {
     setFlatId(flatId)
   }
 
-  const [getUserProfile, { called, loading, data }] =
-    useLazyQuery(GET_USER_QUERY)
+  const [getUserProfile, { loading, data }] = useLazyQuery(GET_USER_QUERY)
 
   const [createUserProfile] = useMutation(CREATE_USER_MUTATION)
 
   useEffect(() => {
-    if (isAuthenticated && !called) {
-      getUserProfile({
-        variables: { id: currentUser.sub },
-      })
-      if (data?.user?.flats?.length === 1) {
-        setFlatId(data.user.flats[0].id)
-        setCurrentStep(2)
-      }
-      if (!loading && !data) {
-        createUserProfile({
-          variables: {
-            input: {
-              id: currentUser.sub,
-              confirmedEmail: true,
-              subscribedToNews: false,
-            },
-          },
+    if (isAuthenticated) {
+      if (!loading && data?.user?.flats[0]?.rawDocUrl) {
+        navigate(routes.dashboard())
+      } else {
+        getUserProfile({
+          variables: { id: currentUser.sub },
         })
+        if (data?.user?.flats?.length === 1) {
+          setFlatId(data.user.flats[0].id)
+          setCurrentStep(2)
+        }
+        if (!loading && data && !data.user) {
+          createUserProfile({
+            variables: {
+              input: {
+                id: currentUser.sub,
+                confirmedEmail: true,
+                subscribedToNews: false,
+              },
+            },
+          })
+        }
       }
     }
   }, [isAuthenticated, data])
@@ -82,8 +88,8 @@ const OnboardingPage = () => {
       <div className="bg-white overflow-hidden shadow rounded-lg">
         <div className="px-4 py-5 sm:p-6">
           {/* TODO Add Loading component */}
-          {loading && <Loader />}
-          {!loading && currentStep === 0 && <AuthUi />}
+          {(authLoading || loading) && <Loader />}
+          {!authLoading && !loading && currentStep === 0 && <AuthUi />}
           {!loading && currentStep === 1 && (
             <NewFlat success={stepOneSuccess} />
           )}
