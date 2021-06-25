@@ -3,6 +3,7 @@ import { useAuth } from '@redwoodjs/auth'
 import { useMutation } from '@redwoodjs/web'
 import { useEffect, useState } from 'react'
 import AuthUi from '../../components/AuthUi'
+import Loader from '../../components/Loader/Loader'
 import NewFlat from '../../components/Onboarding/NewFlat/NewFlat'
 import UploadFile from '../../components/Onboarding/UploadFile/UploadFile'
 import OnboardingSteps from '../../components/OnboardingSteps/OnboardingSteps'
@@ -38,12 +39,13 @@ const OnboardingPage = () => {
     setFlatId(flatId)
   }
 
-  const [getUserProfile, { loading, data }] = useLazyQuery(GET_USER_QUERY)
+  const [getUserProfile, { called, loading, data }] =
+    useLazyQuery(GET_USER_QUERY)
 
   const [createUserProfile] = useMutation(CREATE_USER_MUTATION)
 
   useEffect(() => {
-    if (isAuthenticated) {
+    if (isAuthenticated && !called) {
       getUserProfile({
         variables: { id: currentUser.sub },
       })
@@ -80,7 +82,7 @@ const OnboardingPage = () => {
       <div className="bg-white overflow-hidden shadow rounded-lg">
         <div className="px-4 py-5 sm:p-6">
           {/* TODO Add Loading component */}
-          {loading && <div>Onboarding status wird abgerufen.</div>}
+          {loading && <Loader />}
           {!loading && currentStep === 0 && <AuthUi />}
           {!loading && currentStep === 1 && (
             <NewFlat success={stepOneSuccess} />
