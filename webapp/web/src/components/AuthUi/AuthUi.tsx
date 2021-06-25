@@ -22,7 +22,7 @@ const AuthUi = () => {
     if (!isAuthenticated && email.length) {
       try {
         setWaitingForConfirmation(true)
-        await logIn({ email, redirectTo: 'http://localhost:8910/dashboard' })
+        await logIn({ email, redirectTo: process.env.HOST + '/onboarding' })
         resetForm()
       } catch (e) {
         const supabaseError = JSON.parse(e.message)
@@ -40,7 +40,7 @@ const AuthUi = () => {
         <div className="max-w-md w-full">
           <div>
             <h2 className="text-center text-3xl font-extrabold text-gray-900">
-              Magic Link anfordern
+              Schritt 1: E-Mailadresse verifizieren
             </h2>
           </div>
           {waitingForConfirmation && (
@@ -75,7 +75,7 @@ const AuthUi = () => {
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
                 <label htmlFor="email-address" className="sr-only">
-                  Email address
+                  E-Mailaddresse
                 </label>
                 <input
                   id="email-address"

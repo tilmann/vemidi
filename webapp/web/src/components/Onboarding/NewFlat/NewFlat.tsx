@@ -27,7 +27,7 @@ const NewFlat = (props) => {
       <div className="max-w-md w-full">
         <div>
           <h2 className="text-center text-3xl font-extrabold text-gray-900">
-            Gebäudedaten
+            Schritt 2: Gebäudedaten
           </h2>
         </div>
 
