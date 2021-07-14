@@ -18,7 +18,10 @@ const UploadFile = (props) => {
   `
 
   const [updateFlat, { loading, error }] = useMutation(UPDATE_FLAT_MUTATION, {
-    onCompleted: () => {},
+    onCompleted: () => {
+      setUploading(false)
+      navigate(routes.dashboard())
+    },
   })
 
   async function uploadFile(event) {
@@ -43,15 +46,11 @@ const UploadFile = (props) => {
         throw uploadError
       }
 
-      await updateFlat({
+      updateFlat({
         variables: { id: flatId, input: { rawDocUrl: filePath } },
       })
-      console.log(filePath)
     } catch (error) {
       alert(error.message)
-    } finally {
-      setUploading(false)
-      navigate(routes.dashboard())
     }
   }
 

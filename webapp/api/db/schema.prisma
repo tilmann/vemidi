@@ -14,7 +14,7 @@ generator client {
 // to create migrations for them and apply to your dev DB.
 
 model User {
-  id               String   @id @default(cuid())
+  id               String   @id @default(cuid()) @db.Uuid
   confirmedEmail   Boolean  @default(false)
   subscribedToNews Boolean  @default(false)
   createdAt        DateTime @default(now())
@@ -28,5 +28,5 @@ model Flat {
   rawDocUrl    String?
   createdAt    DateTime @default(now())
   User         User?    @relation(fields: [userId], references: [id])
-  userId       String?
+  userId       String?  @db.Uuid
 }

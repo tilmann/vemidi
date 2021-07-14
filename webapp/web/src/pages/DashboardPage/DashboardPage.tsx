@@ -1,11 +1,12 @@
+import React from 'react'
 import ActionCards from 'src/components/Dashboard/ActionCards'
-import FlatCard from 'src/components/Dashboard/FlatCard'
+import FlatsCardsCell from 'src/components/FlatsCardsCell'
 
 const DashboardPage = () => {
   return (
     <>
       <div className="grid grid-cols-1 gap-4 lg:col-span-2">
-        <FlatCard />
+        <FlatsCardsCell />
         <ActionCards />
       </div>
     </>
