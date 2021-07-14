@@ -27,7 +27,7 @@ const HeaderLanding = () => {
               <span className="sr-only">Workflow</span>
               <img
                 className="h-10 w-auto"
-                src="https://www.vemidi.de/assets/logo_vemidi_white.svg"
+                src="logo_retrofit_white.png"
                 alt=""
               />
             </a>
@@ -43,7 +43,8 @@ const HeaderLanding = () => {
               ))}
             </div>
           </div>
-          {isAuthenticated && (
+          {/* Removed buttons by adding false &&  */}
+          {false && isAuthenticated && (
             <div className="ml-10 space-x-4">
               <Link
                 to={routes.onboarding()}
@@ -60,7 +61,8 @@ const HeaderLanding = () => {
               </Link>
             </div>
           )}
-          {!isAuthenticated && (
+          {/* Removed buttons by adding false &&  */}
+          {false && !isAuthenticated && (
             <div className="ml-10 space-x-4">
               <Link
                 to={routes.onboarding()}

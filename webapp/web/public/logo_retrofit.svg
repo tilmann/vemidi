@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1893.069mm" height="372.12445mm"
+   viewBox="0 0 1893.069 372.12445" version="1.1" id="svg8"
+   inkscape:export-filename="/Users/keunecke/Desktop/retrofit_black.png" inkscape:export-xdpi="13.42"
+   inkscape:export-ydpi="13.42" inkscape:version="1.0.2 (e86c8708, 2021-01-15)" sodipodi:docname="retrofit.svg">
+   <defs id="defs2" />
+   <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0"
+      inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="0.10962671" inkscape:cx="2337.4457"
+      inkscape:cy="906.53978" inkscape:document-units="mm" inkscape:current-layer="layer1"
+      inkscape:document-rotation="0" showgrid="false" inkscape:pagecheckerboard="true" showguides="true"
+      inkscape:guide-bbox="true" inkscape:snap-bbox="true" inkscape:bbox-paths="true" inkscape:bbox-nodes="true"
+      inkscape:snap-bbox-edge-midpoints="true" inkscape:snap-bbox-midpoints="true" showborder="false" fit-margin-top="0"
+      fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" inkscape:window-width="1440"
+      inkscape:window-height="847" inkscape:window-x="0" inkscape:window-y="25" inkscape:window-maximized="1" />
+   <metadata id="metadata5">
+      <rdf:RDF>
+         <cc:Work rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title></dc:title>
+         </cc:Work>
+      </rdf:RDF>
+   </metadata>
+   <g inkscape:label="Ebene 1" inkscape:groupmode="layer" id="layer1" transform="translate(330.07965,45.380664)">
+      <text xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:456.19400000000001683px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.4048;"
+         x="100.06063" y="321.26947" id="text12" inkscape:export-xdpi="13.42" inkscape:export-ydpi="13.42">
+         <tspan sodipodi:role="line" id="tspan10" x="100.06063" y="321.26947"
+            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'World of Water';-inkscape-font-specification:'World of Water';stroke-width:11.4048;fill:#ffffff;">
+            retrofit</tspan>
+      </text>
+      <path
+         d="m -267.22656,12.692306 c -0.28945,-70.759381 -1.29302,-56.674283 0.0717,-57.356643 h -62.92479 v 96.020993 h 1.75286 c -0.99959,1.11443 -1.56448,2.2868 -1.56448,3.64755 v 9.43874 62.924834 44.62036 0 c -0.12383,0.42175 -0.18838,0.8599 -0.18838,1.31948 v 9.43874 62.9248 76.31007 h 62.92479 v -53.03256 h 0.18839 v -60.08079 c 0.46302,-1.71529 1.71053,-3.08081 2.95804,-3.70469 l 88.48799,-55.05921 c 2.35968,-1.57314 4.71937,-1.57314 7.07903,0 l 88.094817,55.05921 c 1.57321,1.17977 2.75299,2.75299 2.75299,5.11281 V 321.98123 H -14.6688 v -53.03256 h 0.18838 V 127.36778 64.442946 55.004206 c 0,-2.35982 -1.57321,-4.3262 -3.14616,-5.11281 l -151.01975,-94.387194 c -2.75296,-1.179777 -5.50592,-1.179777 -7.07906,0 z m 0.26009,118.023214 V 91.972586 c 0,-2.35982 1.57321,-4.32621 3.14616,-5.11281 l 88.4882,-55.05927 c 2.35969,-1.57294 4.71937,-1.57294 7.07906,0 l 88.094837,55.05927 c 1.57322,1.18004 2.75299,2.75299 2.75299,5.11281 V 130.95095 L -168.83469,73.807616 c -2.75296,-1.17978 -5.50592,-1.17978 -7.07903,0 z m 126.44807,95.24471 h -62.92506 v 96.021 h 62.92506 c 0,-114.06505 -1.57321,-95.23439 0,-96.021 z"
+         fill="#000000" fill-opacity="1" id="path28" style="stroke-width:0.264583;fill:#000000"
+         inkscape:export-xdpi="13.42" inkscape:export-ydpi="13.42" />
+   </g>
+</svg>
