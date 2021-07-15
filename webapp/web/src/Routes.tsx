@@ -36,6 +36,9 @@ const Routes = () => {
         <Route path="/dashboard" page={DashboardPage} name="dashboard" />
       </Set>
       <Set wrap={LandingLayout}>
+        <Route path="/meet" page={ContactPage} name="meet" />
+        <Route path="/data" page={ContactPage} name="data" />
+        <Route path="/impressum" page={ImpressumPage} name="impressum" />
         <Route path="/" page={HomePage} name="home" />
       </Set>
       <Route notfound page={NotFoundPage} />

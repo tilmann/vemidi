@@ -208,7 +208,7 @@ const HomePage = () => {
                     </div> */}
                     <div className="mt-4 flex">
                       <div className="w-5/12 text-center">
-                        <Link to={routes.onboarding()}>
+                        <Link to={routes.data()}>
                           <button
                             type="submit"
                             className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10"
@@ -225,7 +225,7 @@ const HomePage = () => {
                         <span className="">oder</span>
                       </div>
                       <div className="w-5/12 text-center">
-                        <Link to={routes.onboarding()}>
+                        <Link to={routes.meet()}>
                           <button
                             type="submit"
                             className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10"
@@ -382,7 +382,7 @@ const HomePage = () => {
                     </div> */}
                   <div className="mt-4 flex">
                     <div className="w-5/12 text-center">
-                      <Link to={routes.onboarding()}>
+                      <Link to={routes.data()}>
                         <button
                           type="submit"
                           className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10"
@@ -399,7 +399,7 @@ const HomePage = () => {
                       <span className="">oder</span>
                     </div>
                     <div className="w-5/12 text-center">
-                      <Link to={routes.onboarding()}>
+                      <Link to={routes.meet()}>
                         <button
                           type="submit"
                           className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10"
