@@ -25,11 +25,7 @@ const HeaderLanding = () => {
           <div className="flex items-center">
             <Link to={routes.home()}>
               <span className="sr-only">Workflow</span>
-              <img
-                className="h-10 w-auto"
-                src="logo_retrofit_white.png"
-                alt=""
-              />
+              <img className="h-10 w-auto" src="logo_optalo_white.png" alt="" />
             </Link>
             <div className="hidden ml-10 space-x-8 lg:block">
               {navigation.map((link) => (

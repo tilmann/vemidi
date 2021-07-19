@@ -126,24 +126,24 @@ const footerNavigation = {
 
 const features = [
   {
-    name: 'Invite team members',
+    name: '(d)ein Tool',
     description:
-      'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quis ac. Lacus.',
+      'Du steuerst deine Sanierung ganz einfach selbst: von der Beratung über die Förderung bis zur Umsetzung.',
   },
   {
-    name: 'Notifications',
+    name: 'schnell',
     description:
-      'Ornare donec rhoncus vitae nisl velit, neque, mauris dictum duis. Nibh urna non parturient.',
+      'Kein monatelanges Warten auf einen Beratungstermin oder Förderantrag.',
   },
   {
-    name: 'List view',
+    name: 'kompetent',
     description:
-      'Etiam cras augue ornare pretium sit malesuada morbi orci, venenatis. Dictum lacus.',
+      'Mit der Kombination aus Fachkompetenz und innovativer Technologie zu deiner optimalen Sanierung.',
   },
   {
-    name: 'Boards',
+    name: 'transparent',
     description:
-      'Interdum quam pulvinar turpis tortor, egestas quis diam amet, natoque. Mauris sagittis.',
+      'Zu jeder Zeit wissen wo du stehst und was als nächstes zu tun ist.',
   },
 ]
 
@@ -169,8 +169,8 @@ const HomePage = () => {
                       to={routes.dashboard()}
                       className="inline-flex space-x-4"
                     >
-                      <span className="rounded bg-indigo-50 px-2.5 py-1 text-xs font-semibold text-indigo-500 tracking-wide uppercase">
-                        Energetische Sanierungen JETZT starten!
+                      <span className="rounded bg-indigo-50 px-2.5 py-1 text-xs font-semibold text-indigo-500 tracking-wide">
+                        einfach.verständlich.energetisch.sanieren
                       </span>
                       {/* <span className="inline-flex items-center text-sm font-medium text-indigo-500 space-x-1">
                           <span>Dashboard</span>
@@ -186,11 +186,12 @@ const HomePage = () => {
                       Energieberatung online
                     </h1>
                     <p className="mt-6 text-xl text-gray-500">
-                      ✔️ Kinderleicht zur geförderten Sanierung!
+                      ✔️ schnell zur geförderten Sanierung!
                       <br />
-                      ✔️ Anmelden. Infos hochladen. Los gehts!
+                      ✔️ einfach Daten hochladen{' '}
+                      <span className="italic">oder</span>
                       <br />
-                      ✔️ (D)ein Prozess!
+                      ✔️ jetzt Termin vereinbaren
                       <br />
                     </p>
                   </div>
@@ -217,7 +218,7 @@ const HomePage = () => {
                           </button>
                           <span className="text-xs text-gray-700">
                             Laden sie Bauplan, Fotos und Heizkostenabrechnung
-                            hoch um sofort zu starten.
+                            hoch um zu starten.
                           </span>
                         </Link>
                       </div>
@@ -233,8 +234,8 @@ const HomePage = () => {
                             Beratung vor Ort anfordern
                           </button>
                           <span className="text-xs  text-gray-700">
-                            Der nächste Termin für eine Energieberatung vor Ort
-                            ist ab dem 07. Oktober verfügbar.
+                            Der nächste vor-Ort Beratungstermin ist schon in
+                            Kürze verfügbar.
                           </span>
                         </Link>
                       </div>
@@ -334,8 +335,7 @@ const HomePage = () => {
                   Energieberatung einfach gemacht
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
-                  Ac euismod vel sit maecenas id pellentesque eu sed
-                  consectetur. Malesuada adipiscing sagittis vel nulla nec.
+                  effizient² - effiziente Planung & effizientes Haus
                 </p>
               </div>
               <dl className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-8">
@@ -406,9 +406,9 @@ const HomePage = () => {
                         >
                           Beratung vor Ort anfordern
                         </button>
-                        <span className="text-xs  text-gray-700">
-                          Der nächste Termin für eine Energieberatung vor Ort
-                          ist ab dem 07. Oktober verfügbar.
+                        <span className="text-xs text-gray-700">
+                          Der nächste vor-Ort Beratungstermin ist schon in Kürze
+                          verfügbar.
                         </span>
                       </Link>
                     </div>

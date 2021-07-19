@@ -13,8 +13,8 @@ const actions = [
     text: 'Optimieren Sie ihre Heizkosten mit diesen drei einfachen Veränderungen ihres Heizverhaltens.',
     href: '#',
     icon: ClockIcon,
-    iconForeground: 'text-teal-700',
-    iconBackground: 'bg-teal-50',
+    iconForeground: 'text-indigo-700',
+    iconBackground: 'bg-indigo-50',
   },
   {
     title: 'Heizung erneuern',

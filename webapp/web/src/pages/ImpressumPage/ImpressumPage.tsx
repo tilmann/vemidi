@@ -4,19 +4,23 @@ const ImpressumPage = () => {
       <main>
         <div className="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-24">
           <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-            <div class="text-gray-800 ">
-              <h1 class="text-3xl">Impressum und Datenschutz</h1>
+            <div className="text-gray-800 ">
+              <h1 className="text-3xl">Impressum und Datenschutz</h1>
               <p>
-                Tilmann Böhme
+                optalo GbR
+                <br />
+                c/o Tilmann Böhme
                 <br />
                 Weserstr. 48
                 <br />
                 12045 Berlin
                 <br />
                 <br />
-                hallo[at]vemidi.de
+                hallo[at]optalo.de
               </p>
-              <h1 class="text-3xl py-12">Disclaimer - rechtliche Hinweise</h1>
+              <h1 className="text-3xl py-12">
+                Disclaimer - rechtliche Hinweise
+              </h1>
               <p>
                 <strong>Auskunfts- und Widerrufsrecht</strong>
               </p>
