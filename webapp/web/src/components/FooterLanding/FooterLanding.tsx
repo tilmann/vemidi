@@ -100,7 +100,7 @@ const FooterLanding = () => {
           ))}
         </div> */}
         <p className="mt-8 text-center text-base text-gray-400">
-          &copy; 2021 retrofit
+          &copy; 2021 optalo
         </p>
       </div>
     </footer>
