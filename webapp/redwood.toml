@@ -8,7 +8,7 @@
 [web]
   port = 8910
   apiProxyPath = "/api"
-  includeEnvironmentVariables = ['SUPABASE_URL', 'SUPABASE_KEY']
+  includeEnvironmentVariables = ['SUPABASE_URL', 'SUPABASE_KEY', 'GOOGLE_ANALYTICS_TRACKING_ID']
 [api]
   port = 8911
   schemaPath = "./api/db/schema.prisma"

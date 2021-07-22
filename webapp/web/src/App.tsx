@@ -4,6 +4,7 @@ import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
 import { createClient } from '@supabase/supabase-js'
 import FatalErrorPage from 'src/pages/FatalErrorPage'
 import Routes from 'src/Routes'
+import './analytics.js'
 import './index.css'
 import './scaffold.css'
 

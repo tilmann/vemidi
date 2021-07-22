@@ -1,3 +1,6 @@
+import { CheckCircleIcon } from '@heroicons/react/solid'
+import { Form, Label, Submit, TextField } from '@redwoodjs/forms'
+import { useLocation } from '@redwoodjs/router'
 import { useState } from 'react'
 
 const settings = [
@@ -21,6 +24,42 @@ function classNames(...classes) {
 
 const ContactPage = () => {
   const [selected, setSelected] = useState(settings[0])
+  const [emailEntered, setEmailEntered] = useState(false)
+  let { pathname } = useLocation()
+  pathname = pathname.substring(1)
+
+  function onSubmit(formData) {
+    setEmailEntered(true)
+    ga('send', 'event', pathname, 'click')
+    formData.path = pathname
+    const https = require('https')
+    var postData = JSON.stringify(formData)
+
+    var options = {
+      hostname: '6boo4tex0m.execute-api.eu-central-1.amazonaws.com',
+      port: 443,
+      path: '/default/optalo-post-lead-to-slack',
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+
+    var req = https.request(options, (res) => {
+      console.log('statusCode:', res.statusCode)
+      console.log('headers:', res.headers)
+
+      res.on('data', (d) => {})
+    })
+
+    req.on('error', (e) => {
+      console.error(e)
+    })
+
+    req.write(postData)
+    req.end()
+  }
+
   return (
     <div className="rounded-lg bg-white overflow-hidden shadow">
       <main>
@@ -100,13 +139,41 @@ const ContactPage = () => {
                         bezüglich ihrer Erwartungen, zu vereinbaren.
                       </p>
                     </div>
-                    <form action="#" className="mt-12 sm:mx-auto sm:max-w-lg">
+                    {emailEntered && (
+                      <div className="rounded-md bg-yellow-50 p-4 mt-8">
+                        <div className="flex">
+                          <div className="flex-shrink-0">
+                            <CheckCircleIcon
+                              className="h-5 w-5 text-green-400"
+                              aria-hidden="true"
+                            />
+                          </div>
+                          <div className="ml-3">
+                            <h3 className="text-sm font-medium text-green-800">
+                              E-Mail gespeichert
+                            </h3>
+                            <div className="mt-2 text-sm text-green-700">
+                              <p>
+                                Wir haben ihre E-Mailadresse gespeichert und
+                                melden uns bei Ihnen sobald das Angebot bereit
+                                steht.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                    <Form
+                      onSubmit={onSubmit}
+                      className="mt-12 sm:mx-auto sm:max-w-lg"
+                    >
                       <div className="sm:flex py-8">
                         <div className="min-w-0 flex-1">
-                          <label htmlFor="cta-email" className="sr-only">
+                          <Label htmlFor="cta-email" className="sr-only">
                             Ihre Emailadresse
-                          </label>
-                          <input
+                          </Label>
+                          <TextField
+                            name="email"
                             id="cta-email"
                             type="email"
                             className="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
@@ -114,19 +181,19 @@ const ContactPage = () => {
                           />
                         </div>
                         <div className="mt-4 sm:mt-0 sm:ml-3">
-                          <button
+                          <Submit
                             type="submit"
                             className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
                           >
                             Gespräch führen
-                          </button>
+                          </Submit>
                         </div>
                       </div>
                       <span className="text-white text-xs">
                         Ihre E-Mailadresse wird ausschließlich zur
                         Kontaktaufnahme in Bezug auf unser Produkt verwendet.
                       </span>
-                    </form>
+                    </Form>
                   </div>
                 </div>
               </div>
