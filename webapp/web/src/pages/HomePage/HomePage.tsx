@@ -234,8 +234,7 @@ const HomePage = () => {
                             Beratung vor Ort anfordern
                           </button>
                           <span className="text-xs  text-gray-700">
-                            Der nächste vor-Ort Beratungstermin ist schon in
-                            Kürze verfügbar.
+                          Vereinbaren Sie einen Termin zur Energieberatung vor Ort in den nächsten Wochen.
                           </span>
                         </Link>
                       </div>
@@ -407,8 +406,7 @@ const HomePage = () => {
                           Beratung vor Ort anfordern
                         </button>
                         <span className="text-xs text-gray-700">
-                          Der nächste vor-Ort Beratungstermin ist schon in Kürze
-                          verfügbar.
+                          Vereinbaren Sie einen Termin zur Energieberatung vor Ort in den nächsten Wochen.
                         </span>
                       </Link>
                     </div>
