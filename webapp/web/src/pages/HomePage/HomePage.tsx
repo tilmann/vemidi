@@ -163,7 +163,7 @@ const HomePage = () => {
                     alt="Workflow"
                   /> */}
                 </div>
-                <div className="mt-20">
+                <div>
                   <div>
                     <Link
                       to={routes.dashboard()}
@@ -234,7 +234,8 @@ const HomePage = () => {
                             Beratung vor Ort anfordern
                           </button>
                           <span className="text-xs  text-gray-700">
-                          Vereinbaren Sie einen Termin zur Energieberatung vor Ort in den nächsten Wochen.
+                            Vereinbaren Sie einen Termin zur Energieberatung vor
+                            Ort in den nächsten Wochen.
                           </span>
                         </Link>
                       </div>
@@ -406,7 +407,8 @@ const HomePage = () => {
                           Beratung vor Ort anfordern
                         </button>
                         <span className="text-xs text-gray-700">
-                          Vereinbaren Sie einen Termin zur Energieberatung vor Ort in den nächsten Wochen.
+                          Vereinbaren Sie einen Termin zur Energieberatung vor
+                          Ort in den nächsten Wochen.
                         </span>
                       </Link>
                     </div>
