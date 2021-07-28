@@ -18,7 +18,6 @@ import { StarIcon } from '@heroicons/react/solid'
 import { Link, routes } from '@redwoodjs/router'
 import FooterLanding from '../../components/FooterLanding/FooterLanding'
 
-
 const features = [
   {
     name: '(d)ein Tool',
@@ -60,21 +59,21 @@ const HomePage = () => {
                 </div>
                 <div>
                   <div>
-                    <Link
+                    {/* <Link
                       to={routes.dashboard()}
                       className="inline-flex space-x-4"
-                    >
-                      <span className="rounded bg-indigo-50 px-2.5 py-1 text-xs font-semibold text-indigo-500 tracking-wide">
-                        einfach.verständlich.energetisch.sanieren
-                      </span>
-                      {/* <span className="inline-flex items-center text-sm font-medium text-indigo-500 space-x-1">
+                    > */}
+                    <span className="rounded bg-indigo-50 px-2.5 py-1 text-xs font-semibold text-indigo-500 tracking-wide">
+                      einfach.verständlich.energetisch.sanieren
+                    </span>
+                    {/* <span className="inline-flex items-center text-sm font-medium text-indigo-500 space-x-1">
                           <span>Dashboard</span>
                           <ChevronRightIcon
                             className="h-5 w-5"
                             aria-hidden="true"
                           />
                         </span> */}
-                    </Link>
+                    {/* </Link> */}
                   </div>
                   <div className="mt-6 sm:max-w-xl">
                     <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
