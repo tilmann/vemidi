@@ -1,29 +1,16 @@
 import { CheckCircleIcon } from '@heroicons/react/solid'
-import { CheckboxField, Form, Label, Submit, TextField } from '@redwoodjs/forms'
+import {
+  CheckboxField,
+  Form,
+  Label,
+  NumberField,
+  Submit,
+  TextField,
+} from '@redwoodjs/forms'
 import { useLocation } from '@redwoodjs/router'
 import { useState } from 'react'
 
-const settings = [
-  {
-    name: 'Interview',
-    description: 'Gerne stehe ich für ein kurzes Interview zur Verfügung.',
-  },
-  {
-    name: 'Benachrichtigung',
-    description: 'Ich möchte eine Nachricht, wenn das Produkt bereit ist.',
-  },
-  {
-    name: 'Newsletter',
-    description: 'Ich möchte aktuelle Informationen zum Fortschritt.',
-  },
-]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 const ContactPage = () => {
-  const [selected, setSelected] = useState(settings[0])
   const [dataFilled, setDataFilled] = useState(false)
   const [emailEntered, setEmailEntered] = useState(false)
 
@@ -63,7 +50,6 @@ const ContactPage = () => {
 
   function onSubmit(formData) {
     setEmailEntered(true)
-    ga('send', 'event', pathname, 'click')
     formData.path = pathname
     sendToSlack(formData)
   }
@@ -71,7 +57,7 @@ const ContactPage = () => {
   return (
     <div className="rounded-lg bg-white overflow-hidden shadow">
       <main>
-        {!dataFilled && pathname === 'data' && (
+        {pathname === 'data' && !dataFilled && (
           <div className="md:grid md:grid-cols-6 lg:grid-cols-8 md:gap-4 py-24">
             <Form
               onSubmit={onSubmitData}
@@ -210,7 +196,127 @@ const ContactPage = () => {
             </Form>
           </div>
         )}
-        {(pathname === 'meet' || dataFilled) && (
+        {(pathname === 'quality' || pathname === 'location') && !dataFilled && (
+          <div className="md:grid md:grid-cols-6 lg:grid-cols-8 md:gap-4 py-24">
+            <Form
+              onSubmit={onSubmitData}
+              className="px-8 col-start-2 col-span-4 lg:col-start-3 lg:col-span-4"
+            >
+              <div className="text-center">
+                <h3 className="text-2xl leading-6 font-medium text-gray-900">
+                  Wir finden die passende Energieberatung!
+                </h3>
+                <p className="mt-1 text-base text-gray-500">
+                  Welche Sanierung/en haben Sie im Blick?
+                </p>
+              </div>
+              <fieldset className="space-y-5 py-8">
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Ihre Postleitzahl
+                  </label>
+                  <div className="mt-1">
+                    <NumberField
+                      type="number"
+                      name="plz"
+                      id="plz"
+                      className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                      placeholder="12345"
+                    />
+                  </div>
+                </div>
+                <legend className="sr-only">Heizung</legend>
+                <div className="relative flex items-start">
+                  <div className="flex items-center h-5">
+                    <CheckboxField
+                      id="heizung"
+                      aria-describedby="heizung-description"
+                      name="heizung"
+                      className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                    />
+                  </div>
+                  <div className="ml-3 text-sm">
+                    <Label
+                      htmlFor="heizung"
+                      className="font-medium text-gray-700"
+                    >
+                      Heizung
+                    </Label>
+                  </div>
+                </div>
+                <legend className="sr-only">Dämmung</legend>
+                <div className="relative flex items-start">
+                  <div className="flex items-center h-5">
+                    <CheckboxField
+                      id="daemmung"
+                      aria-describedby="daemmung-description"
+                      name="daemmung"
+                      className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                    />
+                  </div>
+                  <div className="ml-3 text-sm">
+                    <Label
+                      htmlFor="daemmung"
+                      className="font-medium text-gray-700"
+                    >
+                      Dämmung
+                    </Label>
+                  </div>
+                </div>
+                <legend className="sr-only">Fenster</legend>
+                <div className="relative flex items-start">
+                  <div className="flex items-center h-5">
+                    <CheckboxField
+                      id="fenster"
+                      aria-describedby="fenster-description"
+                      name="fenster"
+                      className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                    />
+                  </div>
+                  <div className="ml-3 text-sm">
+                    <Label
+                      htmlFor="fenster"
+                      className="font-medium text-gray-700"
+                    >
+                      Fenster
+                    </Label>
+                  </div>
+                </div>
+                <legend className="sr-only">Photovoltaik</legend>
+                <div className="relative flex items-start">
+                  <div className="flex items-center h-5">
+                    <CheckboxField
+                      id="photovoltaik"
+                      aria-describedby="photovoltaik-description"
+                      name="photovoltaik"
+                      className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                    />
+                  </div>
+                  <div className="ml-3 text-sm">
+                    <Label
+                      htmlFor="photovoltaik"
+                      className="font-medium text-gray-700"
+                    >
+                      Photovoltaik
+                    </Label>
+                  </div>
+                </div>
+              </fieldset>
+              <div className="flex justify-center ">
+                <Submit
+                  type="submit"
+                  className="mt-8 block rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
+                >
+                  Energieberatung finden
+                </Submit>
+              </div>
+            </Form>
+          </div>
+        )}
+        {(pathname === 'meet' || pathname === 'info' || dataFilled) && (
           <div className="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-24">
             <div className="mx-auto max-w-md md:px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
               <div className="relative sm:py-16">
@@ -281,9 +387,8 @@ const ContactPage = () => {
                         </h2>
                         <p className="mt-6 mx-auto max-w-2xl text-lg text-indigo-200">
                           Danke für ihr Interesse. Wir arbeiten mit Hochdruck
-                          daran, die passenden Angebote für eine
-                          Online-Energieberatung zur Verfügung zu stellen.{' '}
-                          <br />
+                          daran, die passenden Angebote zur Verfügung zu
+                          stellen. <br />
                           Gerne kontaktieren wir sie, um ein kurzes Gespräch
                           bezüglich ihrer Erwartungen zu vereinbaren.
                         </p>

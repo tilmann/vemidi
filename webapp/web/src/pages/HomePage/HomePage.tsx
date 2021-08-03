@@ -18,6 +18,30 @@ import { StarIcon } from '@heroicons/react/solid'
 import { Link, routes } from '@redwoodjs/router'
 import FooterLanding from '../../components/FooterLanding/FooterLanding'
 
+// Hallo Martin, hallo Sebastian,
+// falls ihr den Link, wohin die Buttons verweisen, verändern wollt, müsst ihr das hier machen:
+// In der Zeile -----> link: routes.XXXXX(), <------- kann man das ändern.
+// Ihr könnt XXXXX durch folgendes ersetzen
+// data --> Formular, welche Daten hat der Kunde zur Hand
+// meet --> Formular, E-Mailadresse
+// quality --> Formular, PLZ und Maßnahmen
+// location --> Formular, PLZ und Mapnahmen
+// info --> Abschluss und Frage nach E-Mailadresse (generisch immer nutzbar)
+// Achtet darauf, dass die Klammern erhalten bleiben
+
+const buttons = [
+  {
+    link: routes.quality(),
+    title: 'Energieberatung vergleichen',
+    subtitle: 'Vergleichen Sie Energieberater:innen anhand von Kriterien.',
+  },
+  {
+    link: routes.location(),
+    title: 'Energieberatung in der Nähe',
+    subtitle: 'Finden Sie Energieberater:innen in ihrer Nähe.',
+  },
+]
+
 const features = [
   {
     name: '(d)ein Tool',
@@ -77,7 +101,7 @@ const HomePage = () => {
                   </div>
                   <div className="mt-6 sm:max-w-xl">
                     <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
-                      Energieberatung online
+                      Energieberatung vergleichen
                     </h1>
                     <p className="mt-6 text-xl text-gray-500">
                       ✔️ schnell zur geförderten Sanierung!
@@ -103,16 +127,15 @@ const HomePage = () => {
                     </div> */}
                     <div className="mt-4 flex">
                       <div className="w-5/12 text-center">
-                        <Link to={routes.data()}>
+                        <Link to={buttons[0].link}>
                           <button
                             type="submit"
                             className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10"
                           >
-                            Ihre Daten hochladen
+                            {buttons[0].title}
                           </button>
                           <span className="text-xs text-gray-700">
-                            Laden sie Bauplan, Fotos und Heizkostenabrechnung
-                            hoch um zu starten.
+                            {buttons[0].subtitle}
                           </span>
                         </Link>
                       </div>
@@ -120,16 +143,15 @@ const HomePage = () => {
                         <span className="">oder</span>
                       </div>
                       <div className="w-5/12 text-center">
-                        <Link to={routes.meet()}>
+                        <Link to={buttons[1].link}>
                           <button
                             type="submit"
                             className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10"
                           >
-                            Beratung vor Ort anfordern
+                            {buttons[1].title}
                           </button>
                           <span className="text-xs  text-gray-700">
-                            Vereinbaren Sie einen Termin zur Energieberatung vor
-                            Ort in den nächsten Wochen.
+                            {buttons[1].subtitle}
                           </span>
                         </Link>
                       </div>
@@ -276,16 +298,15 @@ const HomePage = () => {
                     </div> */}
                   <div className="mt-4 flex">
                     <div className="w-5/12 text-center">
-                      <Link to={routes.data()}>
+                      <Link to={buttons[0].link}>
                         <button
                           type="submit"
                           className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10"
                         >
-                          Ihre Daten hochladen
+                          {buttons[0].title}
                         </button>
                         <span className="text-xs text-gray-700">
-                          Laden sie Bauplan, Fotos und Heizkostenabrechnung hoch
-                          um sofort zu starten.
+                          {buttons[0].subtitle}
                         </span>
                       </Link>
                     </div>
@@ -293,16 +314,15 @@ const HomePage = () => {
                       <span className="">oder</span>
                     </div>
                     <div className="w-5/12 text-center">
-                      <Link to={routes.meet()}>
+                      <Link to={buttons[1].link}>
                         <button
                           type="submit"
                           className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10"
                         >
-                          Beratung vor Ort anfordern
+                          {buttons[1].title}
                         </button>
-                        <span className="text-xs text-gray-700">
-                          Vereinbaren Sie einen Termin zur Energieberatung vor
-                          Ort in den nächsten Wochen.
+                        <span className="text-xs  text-gray-700">
+                          {buttons[1].subtitle}
                         </span>
                       </Link>
                     </div>
