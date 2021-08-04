@@ -32,13 +32,13 @@ import FooterLanding from '../../components/FooterLanding/FooterLanding'
 const buttons = [
   {
     link: routes.quality(),
-    title: 'Energieberatung vergleichen',
-    subtitle: 'Vergleichen Sie Energieberater:innen anhand von Kriterien.',
+    title: 'Energieberater*innen vergleichen',
+    subtitle: 'Vergleichen Sie Energieberater*innen anhand von Kriterien.',
   },
   {
     link: routes.location(),
-    title: 'Energieberatung in der Nähe',
-    subtitle: 'Finden Sie Energieberater:innen in ihrer Nähe.',
+    title: 'Energieberater*innen in der Nähe',
+    subtitle: 'Finden Sie Energieberater*innen in ihrer Nähe.',
   },
 ]
 
