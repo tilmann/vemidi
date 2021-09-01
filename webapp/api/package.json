@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@redwoodjs/api": "^0.34.1",
-    "@redwoodjs/api-server": "^0.34.1"
+    "@redwoodjs/api": "^0.36.2",
+    "@redwoodjs/api-server": "^0.36.2"
   },
   "devDependencies": {
     "@netlify/zip-it-and-ship-it": "^4.2.2",

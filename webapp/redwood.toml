@@ -6,6 +6,7 @@
 # https://redwoodjs.com/docs/app-configuration-redwood-toml
 
 [web]
+  title="optalo - Energieberatung online"
   port = 8910
   apiProxyPath = "/api"
   includeEnvironmentVariables = ['SUPABASE_URL', 'SUPABASE_KEY', 'GOOGLE_ANALYTICS_TRACKING_ID']

@@ -10,7 +10,7 @@ import UploadFile from '../../components/Onboarding/UploadFile/UploadFile'
 import OnboardingSteps from '../../components/OnboardingSteps/OnboardingSteps'
 
 const GET_USER_QUERY = gql`
-  query FindUserById($id: String!) {
+  query FindUserWithFlatsById($id: String!) {
     user: user(id: $id) {
       id
       confirmedEmail

@@ -18,29 +18,30 @@ const ContactPage = () => {
   pathname = pathname.substring(1)
 
   function sendToSlack(formData) {
-    const https = require('https')
-    var postData = JSON.stringify(formData)
+    console.log('Send')
+    // const https = require('https')
+    // var postData = JSON.stringify(formData)
 
-    var options = {
-      hostname: '6boo4tex0m.execute-api.eu-central-1.amazonaws.com',
-      port: 443,
-      path: '/default/optalo-post-lead-to-slack',
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }
+    // var options = {
+    //   hostname: '6boo4tex0m.execute-api.eu-central-1.amazonaws.com',
+    //   port: 443,
+    //   path: '/default/optalo-post-lead-to-slack',
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    // }
 
-    var req = https.request(options, (res) => {
-      res.on('data', (d) => {})
-    })
+    // var req = https.request(options, (res) => {
+    //   res.on('data', (d) => {})
+    // })
 
-    req.on('error', (e) => {
-      console.error(e)
-    })
+    // req.on('error', (e) => {
+    //   console.error(e)
+    // })
 
-    req.write(postData)
-    req.end()
+    // req.write(postData)
+    // req.end()
   }
 
   function onSubmitData(formData) {

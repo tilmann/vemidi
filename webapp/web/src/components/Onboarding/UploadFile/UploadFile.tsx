@@ -9,7 +9,7 @@ const UploadFile = (props) => {
   const supabase = client
   const flatId = props.flatId
   const UPDATE_FLAT_MUTATION = gql`
-    mutation UpdateFlatMutation($id: String!, $input: UpdateFlatInput!) {
+    mutation UpdateFlatMutationWithUrl($id: String!, $input: UpdateFlatInput!) {
       updateFlat(id: $id, input: $input) {
         id
         rawDocUrl

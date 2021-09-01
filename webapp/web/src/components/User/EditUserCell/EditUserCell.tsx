@@ -1,18 +1,18 @@
+import { navigate, routes } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
-import { navigate, routes } from '@redwoodjs/router'
 import UserForm from 'src/components/User/UserForm'
 
-export const QUERY = gql`
-  query FindUserById($id: String!) {
-    user: user(id: $id) {
-      id
-      confirmedEmail
-      subscribedToNews
-      createdAt
-    }
-  }
-`
+// export const QUERY = gql`
+//   query FindUserById($id: String!) {
+//     user: user(id: $id) {
+//       id
+//       confirmedEmail
+//       subscribedToNews
+//       createdAt
+//     }
+//   }
+// `
 const UPDATE_USER_MUTATION = gql`
   mutation UpdateUserMutation($id: String!, $input: UpdateUserInput!) {
     updateUser(id: $id, input: $input) {
