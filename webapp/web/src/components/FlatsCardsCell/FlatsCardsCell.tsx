@@ -27,7 +27,11 @@ export const Success = ({ flatsCards }: CellSuccessProps<FlatsCardsQuery>) => {
   return (
     <ul>
       {flatsCards.map((flat) => {
-        return <FlatCard flat={flat} key={flat.id} />
+        return (
+          <div className="py-4">
+            <FlatCard flat={flat} key={flat.id} />
+          </div>
+        )
       })}
     </ul>
   )
