@@ -32,12 +32,12 @@ import FooterLanding from '../../components/FooterLanding/FooterLanding'
 const buttons = [
   {
     link: routes.quality(),
-    title: 'Energieberater*innen vergleichen',
+    title: 'Energieberatung vergleichen',
     subtitle: 'Vergleichen Sie Energieberater*innen anhand von Kriterien.',
   },
   {
     link: routes.location(),
-    title: 'Energieberater*innen in der Nähe',
+    title: 'Energieberatung in der Nähe',
     subtitle: 'Finden Sie Energieberater*innen in ihrer Nähe.',
   },
 ]
@@ -130,7 +130,7 @@ const HomePage = () => {
                         <Link to={buttons[0].link}>
                           <button
                             type="submit"
-                            className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10"
+                            className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                           >
                             {buttons[0].title}
                           </button>
@@ -146,7 +146,7 @@ const HomePage = () => {
                         <Link to={buttons[1].link}>
                           <button
                             type="submit"
-                            className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10"
+                            className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                           >
                             {buttons[1].title}
                           </button>
@@ -301,7 +301,7 @@ const HomePage = () => {
                       <Link to={buttons[0].link}>
                         <button
                           type="submit"
-                          className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10"
+                          className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                         >
                           {buttons[0].title}
                         </button>
@@ -317,7 +317,7 @@ const HomePage = () => {
                       <Link to={buttons[1].link}>
                         <button
                           type="submit"
-                          className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10"
+                          className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                         >
                           {buttons[1].title}
                         </button>
